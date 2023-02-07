@@ -13,12 +13,53 @@ h1 {
   margin: 0px;
 }
 
-.bg-image {
+h2 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 150px;
+  margin: 0px;
+}
+
+.index_bg-image {
   /* The image used */
   background-image: url("assets/womancook.jpg");
 
   /* Add the blur effect */
   filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signIn_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook3.jpg");
+
+  /* Add the blur effect */
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logIn_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook2.jpg");
+
+  /* Add the blur effect */
+
   -webkit-filter: blur(1px);
 
   /* Full height */
@@ -44,6 +85,36 @@ h1 {
   text-align: center;
 }
 
+
+input {
+  border: 2px solid skyblue;
+  border-radius: 4px;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  align-self: right;
+}
+
+form {
+  text-align: center;
+  margin: 0px 300px 0px 200px;
+}
+
+.labeldiv {
+  float: left;
+  width: 100px;
+  margin-top: 20px;
+
+}
+input:focus {
+  background-color: lightcyan;
+}
+
+label {
+  text-shadow:-1px -1px black;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -59,6 +130,7 @@ nav{
 .nav-links ul{
     text-align: center;
     text-shadow: 2px 2px dimgray;
+    padding: 0px;
 }
 
 .nav-links ul li{
