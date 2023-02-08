@@ -1,0 +1,81 @@
+h1{
+     text-align: center;
+     margin-left: auto;
+     margin-right: 0;
+     margin-top: 60px;
+     /* display: inline; */
+ }
+
+ div{
+     border: solid;
+     margin-top: 50px;
+     width: 250px;
+     height: 400px;
+     padding: 30px;
+     text-align: center;
+     font-size: 16px;
+     line-height: 35px;
+ }
+
+ #divbasic{
+     float: left;
+     margin-right:230px ;
+     margin-left: 50px;
+
+ }
+
+ #divstandard{
+     float:left;
+ }
+
+ #divpremium{
+     float: right;
+     margin-right: 50px;
+ }
+
+ .price{
+     border: solid;
+     height: 60px;
+     -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+     -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+ }
+
+ button{
+     padding: 5px;
+     margin-top: 15px;
+     width: 130px;
+     height: 30px;
+     -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+     -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+ }
+
+ #buttonb{
+     background-color: palevioletred;
+     border-color: palevioletred;
+
+ }
+
+ #buttons{
+     background-color: greenyellow;
+     border-color: greenyellow;
+ }
+
+ #buttonp{
+     background-color: orange;
+     border-color: orange;
+ }
+
+ #priceb{
+     background-color: palevioletred;
+     border-color: palevioletred;
+ }
+
+ #prices{
+     background-color: greenyellow;
+     border-color: greenyellow;
+ }
+
+ #pricep{
+     background-color: greenyellow;
+     border-color: greenyellow;
+ }
