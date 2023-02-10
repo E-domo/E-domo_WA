@@ -10,7 +10,7 @@ h1{
      border: solid;
      margin-top: 50px;
      width: 250px;
-     height: 400px;
+     height: 500px;
      padding: 30px;
      text-align: center;
      font-size: 16px;
@@ -79,3 +79,34 @@ h1{
      background-color: greenyellow;
      border-color: greenyellow;
  }
+
+ .Sub_bg-image {
+  /* The image used */
+  background-image: url("assets/mancook.jpg");
+
+  /* Add the blur effect */
+
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 85%;
+  padding: 20px;
+  text-align: center;
+}
