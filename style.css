@@ -180,7 +180,8 @@ nav{
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 250px;
+  flex: center;
 }
 
 /* Create two equal columns that sits next to each other */
@@ -189,9 +190,19 @@ nav{
   padding: 0 4px;
 }
 
+.column {
+  flex: 33%;
+  padding: 0 4px;
+}
+
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 80%;
   margin-left: 50px;
+}
+
+.title {
+  font-weight: bold;
+  text-shadow: 2px 2px dimgray;
 }
