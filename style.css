@@ -76,8 +76,59 @@ h2 {
   background-image: url("assets/childcook.jpg");
 
   /* Add the blur effect */
-filter: blur(3px);
-  -webkit-filter: blur(10px);
+filter: blur(2px);
+  -webkit-filter: blur(2px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Events_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook4.jpg");
+
+  /* Add the blur effect */
+filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Sub_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook5.jpg");
+
+  /* Add the blur effect */
+filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.recipe_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook6.jpg");
+
+  /* Add the blur effect */
+filter: blur(1px);
+  -webkit-filter: blur(1px);
 
   /* Full height */
   height: 100%; 
@@ -193,7 +244,7 @@ nav{
 
 .recipe_nav-links ul{
     text-align: right;
-    text-shadow: 2px 2px dimgray;
+    text-shadow: 1px 1px lightcyan;
     padding: 0px;
 }
 
@@ -205,7 +256,7 @@ nav{
 }
 
 .recipe_nav-links ul li a{
-    color:  #fff;
+    color:  #000;
     text-decoration: none;
     font-size: 20px;
 }
@@ -227,14 +278,36 @@ nav{
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 250px;
-  flex: center;
+  padding: 0 180px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.subcolumn{
+    flex: 33%;
+    padding: 0 4px;
+    border-style: solid; 
+    border-width: medium; 
+    border-color: lightseagreen;
+    margin-right: 2px;
+    padding-bottom: 20px;
+}
+.subname{
+   text-align: center;
+   font-weight: bold;
+   font-style: italic;
+   font-size: 20px;
+}
+.price{
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
 }
 
 /* Create two equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  padding: 0 4px;
+.boldword{
+  inline-size: auto;
+  font-weight: bold;
 }
 
 .column {
@@ -254,8 +327,9 @@ nav{
   text-shadow: 2px 2px dimgray;
 }
 
-.subdiv {
-  height: 150px;
+.recipe {
+  height: 200px;
+  width: 100%;
 }
 
 .adminbutton {
@@ -264,3 +338,58 @@ nav{
   padding: 15px 25px;
   text-decoration: none;
 }
+
+
+
+.Packagebtn {
+  position: absolute; 
+  bottom: -47%;
+}
+
+.dropbtn {
+  background-color: lightskyblue;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content p {
+  color: black;
+  padding: 4px 4px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content p:hover {background-color: dimgray;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: blue;
+}
+
+
