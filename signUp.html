@@ -11,7 +11,7 @@
 <div class="signIn_bg-image"></div>
 
 <div class="bg-text">
-	<h2 style="text-shadow: 2px 2px dimgray;">Sign In</h2>
+	<h2 style="text-shadow: 2px 2px dimgray;">Sign Up!</h2>
 	<div class="nav-links">
 		<ul>
 	<li><a href="index.html">Home</a></li>
@@ -21,46 +21,31 @@
 	<li><a href="events.html">Events</a></li>
 	</ul>
 </div>
-	<form>
-		<div class="labeldiv">
-			<label for="fname" >Full Name: </label>
-		</div>
+	<form action="signup_proc.php">
 
 		<input type="text" id="fname" placeholder="Full Name" size="20" maxlength="45"><br>
 
-		<div class="labeldiv">
-			<label for="date" >Date of Birth: </label>
-		</div>
+
 
 		<input type="date"  id="date" placeholder="" size="20" ><br>
 
-		<div class="labeldiv">
-			<label for="useremail" >Email: </label>
-		</div>
-		
+
+
 		<input type="email" id="useremail" placeholder="Email address" size="20" maxlength="60"><br>
 
-		<div class="labeldiv">
-			<label for="password" >Password: </label>
-		</div>
+
 		
 		<input type="password" id="password" placeholder="Password" size="20" maxlength="60"><br>
 
-		<div class="labeldiv">
-			<label for="Package" >Package: </label>
-		</div>
-
-		<div class="dropdown">
-		  <button class="dropbtn">pick a package</button>
-		  <div class="dropdown-content">
-		    <p>Basic</p>
-		    <p >Standard</p>
-		    <p>Premium</p>
-		  </div>
-		</div>
 
 
-</div>
+		<select name = "dropSelect">
+         <option value="holding">Select:</option>
+         <option value="B">Basic</option>
+         <option value="S">Standard</option>
+         <option value="P">Premium</option>
+      </select>
+		<input type="submit" name="submitbuttn">
 
 
 	</form>
@@ -68,7 +53,6 @@
 </div>
 
 
-</div>
-
 </body>
+
 </html>

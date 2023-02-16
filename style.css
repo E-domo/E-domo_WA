@@ -166,16 +166,14 @@ input {
 
 form {
   text-align: center;
-  margin: 0px 300px 0px 200px;
+  margin: 0px 200px 0px 200px;
 }
 
-.labeldiv {
-  float: left;
-  width: 100px;
-  margin-top: 20px;
 
-}
 input:focus {
+  background-color: lightcyan;
+}
+input[type=submit]:hover{
   background-color: lightcyan;
 }
 
@@ -340,56 +338,28 @@ nav{
 }
 
 
-
 .Packagebtn {
+  color: dimgray;
+  text-decoration: none;
   position: absolute; 
   bottom: -47%;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  text-align: center;
+  width: 23.5%;
 }
 
-.dropbtn {
-  background-color: lightskyblue;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 140px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content p {
+.Packagebtn:hover{
   color: black;
-  padding: 4px 4px;
-  text-decoration: none;
-  display: block;
+  font-weight: bold;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content p:hover {background-color: dimgray;}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: blue;
+select {
+  width: 60%;
+  padding: 10px
 }
 
 
