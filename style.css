@@ -364,17 +364,29 @@ nav{
   font-weight: bold;
 }
 
+.approval {
+  padding: 5px;
+  border: 10px solid #e3bc9a;
+  background-color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+
 button {
   width: 80px;
-  height: 50px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 30px;
+
 }
 
 .approve{
-  background-color: green;
+  background-color: seagreen;
+  margin-left: 83vw;
 }
 
 .deny{
-  background-color: red;
+  background-color: orangered;
 }
 
 
