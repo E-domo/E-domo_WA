@@ -18,8 +18,8 @@
 			
 			<div class="nav-links">
 				<ul style="text-align: left;">
-					<li><a href="adminIndex.html" style="color: dimgray; text-shadow:0px 0px dimgray;">Admin Home</a></li>
-					<li><a href="index.html" style="color: dimgray; text-shadow:0px 0px dimgray;">Logout</a></li>
+					<li><a href="adminIndex.php" style="color: dimgray; text-shadow:0px 0px dimgray;">Admin Home</a></li>
+					<li><a href="index.php" style="color: dimgray; text-shadow:0px 0px dimgray;">Logout</a></li>
 				</ul>
 
 			</div>

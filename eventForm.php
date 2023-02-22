@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +15,8 @@
 	<h2 style="text-shadow: 2px 2px dimgray;">Event Form</h2>
 	<div class="nav-links">
 		<ul>
-	<li><a href="adminIndex.html">Admin Home</a></li>
-	<li><a href="recipeForm.html">Recipe Form</a></li>
+	<li><a href="adminIndex.php">Admin Home</a></li>
+	<li><a href="recipeForm.php">Recipe Form</a></li>
 
 	</ul>
 </div>

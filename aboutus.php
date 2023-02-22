@@ -20,13 +20,13 @@
 			
 			<div class="nav-links">
 				<ul>
-					<li><a href="signup.html">Sign Up</a></li>
-					<li><a href="login.html">Log In</a></li>					
+					<li><a href="signup.php">Sign Up</a></li>
+					<li><a href="login.php">Log In</a></li>					
 				</ul>
 
 			</div>
 		</nav>
-		<p style="color: black;">E domo is Latin, for 'from home', so the Web App itslef was designed to feel easy to access and understand<br>
+		<p style="background-color: antiquewhite;">E domo is Latin, for 'from home', so the Web App itslef was designed to feel easy to access and understand<br>
 			We made this website because we felt there was a need for more concentration in nutrition and diet in many homes, and eating the same meals over and over again was not an effective way of gaining nutrients. 
 
 		This webiste is not just for signle parents looking for easy-to-cook and healthy meals, but anyone with the time and patience to learn and apply new recipes, and change their whole perspective on what it means to make a meal, like it was ...</p> <a href="index.html">E domo</a>

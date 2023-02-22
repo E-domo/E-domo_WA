@@ -324,6 +324,7 @@ nav{
   border-radius: 10px;
   box-shadow: 0 0 5px 10px #e3bc9a;
   margin: 10px;
+  margin-bottom: 35px;
 
 }
 
@@ -371,6 +372,10 @@ nav{
   margin-bottom: 10px;
 }
 
+.confrimPopup{
+
+}
+
 
 button {
   width: 80px;
@@ -382,7 +387,7 @@ button {
 
 .approve{
   background-color: seagreen;
-  margin-left: 83vw;
+  margin-left: 75vw;
 }
 
 .deny{

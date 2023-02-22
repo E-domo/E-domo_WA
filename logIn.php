@@ -14,10 +14,10 @@
 	<h2 style="text-shadow: 2px 2px dimgray;"> Welcome Back!</h2>
 	<div class="nav-links">
 		<ul>
-	<li><a href="index.html">Home</a></li>
-	<li><a href="signUp.html">Sign Up</a></li>
-	<li><a href="aboutus.html">About Us</a></li>
-	<li><a href="events.html">Events</a></li>
+	<li><a href="index.php">Home</a></li>
+	<li><a href="signUp.php">Sign Up</a></li>
+	<li><a href="aboutus.php">About Us</a></li>
+	<li><a href="events.php">Events</a></li>
 
 	</ul>
 </div>
