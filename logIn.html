@@ -21,16 +21,16 @@
 
 	</ul>
 </div>
-	<form action="login_proc.php">
+	<form action="login_proc.php" method="POST">
 	
 
-			<input type="email" id="useremail" placeholder="Email address" size="20" maxlength="60"><br>
+			<input type="email" id="useremail" name="useremail" placeholder="Email address" size="20" maxlength="60"><br>
 
 
-			<input type="password" id="password" placeholder="Password" size="20" maxlength="60"><br>
+			<input type="password" id="upassword" name="upassword" placeholder="Password" size="20" maxlength="60"><br>
 		
 
-	<input type="submit" name="submitbuttn" >
+	<input type="submit" name="submitbuttn" id="submitbuttn" value="submitbuttn">
 	</form>
 	
 </div>
