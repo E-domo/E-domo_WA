@@ -1,6 +1,6 @@
 <?php 
 
-	if (isset($_POST['login'])) 
+	if (isset($_POST['submitbuttn'])) 
 	{
 		//collection form data
 		echo "this works";
@@ -11,7 +11,7 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-		$dbname = "TBD";
+		$dbname = "edomo";
 
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
@@ -21,16 +21,17 @@
 		  die("Connection failed: " . $conn->connect_error);
 		} 
 
-		$sql = "SELECT * FROM Users WHERE useremail= '$user_email'";
+		// Checking if user exists
+		$sql = "SELECT * FROM users WHERE userEmail= '$user_email'";
 		var_dump($sql);
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0){
 			$row = $result->fetch_assoc();
-			$userID = $row['user_id'];
-			$user_Name = $row['user_email'];
-			$user_Pass = $row['user_pass'];
-			$user_Type = $row['userType'];
+			$userID = $row['userIndex'];
+			$user_Name = $row['userEmail'];
+			$user_PassdB = $row['userPassword'];
+			$user_Type = $row['typeIndex'];
 
  		}else{
 			header("Location: logIn.html");
@@ -38,14 +39,15 @@
 			alert("User does not exist");
 		}
 
-		if (password_verify($user_pass, $user_Pass)){
-			if ($user_Status == 2) {
-				header("Location: inactive.php");
+		if (password_verify($user_pass, $user_PassdB)){
+			if ($user_Type == 3) {
+				header("Location: index.html");
 				exit();
 			}
 		}else{
-			header("Location: login.php");
+			header("Location: login.html");
 			exit();
+			alert("There was an issue");	
 		}
 
 		session_start();
