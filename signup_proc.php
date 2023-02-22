@@ -34,7 +34,7 @@ if (isset($_POST['submitbuttn']))
 	//user role (1 is admin, 2 is standard user)
 	//user status( 1 is active, 2 is inactive)
 	$sql = "INSERT INTO users (userEmail, fname, lname, userPassword, typeIndex)
-	VALUES ('$user_email', '$user_fname', '$user_lname', '$user_pass', '$subs')";
+	VALUES ('$user_email', '$user_fname', '$user_lname', '$encrypted_pass', '$subs')";
 
 	// check if query worked
 	if ($conn->query($sql) === TRUE) {

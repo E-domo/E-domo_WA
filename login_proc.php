@@ -43,6 +43,9 @@
 			if ($user_Type == 3) {
 				header("Location: index.html");
 				exit();
+			}elseif ($user_Type == 1) {
+				header("Location: adminindex.html");
+				exit();
 			}
 		}else{
 			header("Location: login.html");

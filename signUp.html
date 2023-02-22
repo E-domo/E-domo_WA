@@ -21,7 +21,7 @@
 	<li><a href="events.html">Events</a></li>
 	</ul>
 </div>
-	<form action="signup_proc.php">
+	<form action="signup_proc.php" method="POST">
 
 		<input type="text" id="fname" name="fname" placeholder="First Name" size="20" maxlength="45"><br>
 
@@ -38,13 +38,12 @@
 
 
 
-		<select name = "dropSelect" id="subscription" name="subscription">
+		<select name = "dropSelect" id="subscription">
          <option value="holding">Select:</option>
-         <option value="1">Basic</option>
-         <option value="2">Standard</option>
-         <option value="3">Premium</option>
+         <option value=4>Content Creator</option>
+         <option value=3>Customer</option>
       </select>
-		<input type="submit" name="submitbuttn" id="submitbuttn">
+		<input type="submit" name="submitbuttn" id="submitbuttn" value="submitbuttn">
 
 
 	</form>
