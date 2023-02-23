@@ -54,7 +54,7 @@
 </div>
 <div class="recipe" style="background-color:antiquewhite;">
 
-<img src="assets/waakye.jpg" alt="food image">
+<img src="assets/beanrice.jpg" alt="food image">
 		<p style="width:10%"><b>Name:</b> Waakye</p>
 		<p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et convallis justo. Donec quis libero at ligula mollis euismod ac eu lorem. Cras cursus neque mauris. Vivamus ac dignissim tortor...  </p>
 		<p style="width:10%"><b>Relevant Ingredients:</b></p>
@@ -68,7 +68,7 @@
 <p>read more</p>
 	</div>
 
-<a href="recipeForm.html" class="adminbutton">secret button</a>
+<a href="recipeForm.php" class="adminbutton">secret button</a>
 
 </body>
 

@@ -26,10 +26,12 @@
 
 			</div>
 		</nav>
-		<p style="background-color: antiquewhite;">E domo is Latin, for 'from home', so the Web App itslef was designed to feel easy to access and understand<br>
-			We made this website because we felt there was a need for more concentration in nutrition and diet in many homes, and eating the same meals over and over again was not an effective way of gaining nutrients. 
+		<div style="background-color: antiquewhite;border: 2px solid whitesmoke;">
+		<p style="color: darkslategrey;">E domo is Latin, for 'from home', so this Web App was designed to feel easy to access and understand<br>
+			We made this website because we felt there was a need for more concentration in nutrition and diet in many homes, and eating the same meals over and over again was not an effective way of gaining nutrients. <br>
 
-		This webiste is not just for signle parents looking for easy-to-cook and healthy meals, but anyone with the time and patience to learn and apply new recipes, and change their whole perspective on what it means to make a meal, like it was ...</p> <a href="index.html">E domo</a>
+		This webiste is not just for single parents looking for easy-to-cook and healthy meals, but anyone with the time and patience to learn and apply new recipes, and change their whole perspective on what it means to make a meal, like it was ... <br><a href="index.php">E domo</a></p>
+	</div>
 	</div>
 
 </body>
