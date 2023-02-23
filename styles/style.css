@@ -171,7 +171,6 @@ filter: blur(1px);
   text-align: center;
 }
 
-
 input {
   border: 2px solid #e3bc9a;
   border-radius: 4px;
@@ -325,7 +324,6 @@ nav{
   border-radius: 10px;
   box-shadow: 0 0 5px 10px #e3bc9a;
   margin: 10px;
-  margin-bottom: 35px;
 
 }
 
@@ -366,34 +364,25 @@ nav{
   font-weight: bold;
 }
 
-.approval {
-  padding: 5px;
-  border: 10px solid #e3bc9a;
-  background-color: whitesmoke;
-  margin-bottom: 10px;
-}
-
-.confrimPopup{
-
-}
-
-
 button {
   width: 80px;
+<<<<<<< HEAD:styles/style.css
   height: 40px;
   margin-right: 10px;
   border-radius: 30px;
   cursor: pointer;
 
+=======
+  height: 50px;
+>>>>>>> a3e969da8be8240fe2535107361ec513c67d49a1:style.css
 }
 
 .approve{
-  background-color: seagreen;
-  margin-left: 75vw;
+  background-color: green;
 }
 
 .deny{
-  background-color: orangered;
+  background-color: red;
 }
 
 

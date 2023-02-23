@@ -1,3 +1,7 @@
+<<?php 
+	session_start();
+ ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -18,13 +22,28 @@
 		<nav class="recipenav">
 			
 			<div class="nav-links">
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="signup.php">Sign Up</a></li>
-					<li><a href="login.php">Log In</a></li>
-					<li><a href="aboutus.php">About Us</a></li>
-					<li><a href="events.php">Events</a></li>
-				</ul>
+				<?php 
+
+					if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
+						echo "<ul>
+							<li><a href='index.php'>Home</a></li>
+							<li><a href='aboutus.html'>About Us</a></li>
+							<li><a href='events.php'>Events</a></li>
+							<li><a href='recipes.php'>Recipes</a></li>
+							<li><a href='logout.php'>Logout</a></li>
+							</ul>";
+					}else{
+						echo "<ul>
+							<li><a href='signup.html' id='signup'>Sign Up</a></li>
+							<li><a href='login.html' id='login'>Log In</a></li>
+							<li><a href='index.php'>Home</a></li>
+							<li><a href='aboutus.html'>About Us</a></li>
+							<li><a href='events.php'>Events</a></li>
+							<li><a href='recipes.php'>Recipes</a></li>	
+							</ul>";
+					}
+					
+			?>
 
 			</div>
 		</nav>
@@ -54,7 +73,7 @@
 </div>
 <div class="recipe" style="background-color:antiquewhite;">
 
-<img src="assets/beanrice.jpg" alt="food image">
+<img src="assets/waakye.jpg" alt="food image">
 		<p style="width:10%"><b>Name:</b> Waakye</p>
 		<p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et convallis justo. Donec quis libero at ligula mollis euismod ac eu lorem. Cras cursus neque mauris. Vivamus ac dignissim tortor...  </p>
 		<p style="width:10%"><b>Relevant Ingredients:</b></p>
@@ -68,7 +87,7 @@
 <p>read more</p>
 	</div>
 
-<a href="recipeForm.php" class="adminbutton">secret button</a>
+<a href="recipeForm.html" class="adminbutton">secret button</a>
 
 </body>
 
