@@ -55,6 +55,7 @@ else
 {
 	//redirect to register page
 	header("Location: signUp.html");
+	echo "<script>console.log('Did not work' );</script>";
 	exit();
 }
 
