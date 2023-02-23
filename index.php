@@ -1,3 +1,7 @@
+<?php 
+session_start();
+ ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,13 +23,27 @@
 			<nav class="nav">
 			
 			<div class="nav-links">
-				<ul>
-					<li><a href="signup.php">Sign Up</a></li>
-					<li><a href="login.php">Log In</a></li>
-					<li><a href="aboutus.php">About Us</a></li>
-					<li><a href="events.php">Events</a></li>
-					<li><a href="recipes.php">Recipes</a></li>	
-				</ul>
+			<?php 
+
+					if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
+						echo "<ul>
+							<li><a href='aboutus.html'>About Us</a></li>
+							<li><a href='events.php'>Events</a></li>
+							<li><a href='recipes.php'>Recipes</a></li>
+							<li><a href='logout.php'>Logout</a></li>
+							</ul>";
+					}else{
+						echo "<ul>
+							<li><a href='signup.html' id='signup'>Sign Up</a></li>
+							<li><a href='login.html' id='login'>Log In</a></li>
+							<li><a href='aboutus.html'>About Us</a></li>
+							<li><a href='events.php'>Events</a></li>
+							<li><a href='recipes.php'>Recipes</a></li>	
+							</ul>";
+					}
+					
+			?>				
+				
 
 			</div>
 		</nav>
@@ -35,3 +53,15 @@
 </body>
 
 </html>
+
+<!-- <?php 
+
+	// if ($_SESSION['userType'] == 4) {
+	// 	echo '<style type="text/css"
+	// 		#login {
+	// 			display: none;
+	// 		}
+	// 		</style>';
+	// }
+
+ ?> -->

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign Up</title>
+</head>
+<body>
+
+<div class="signIn_bg-image"></div>
+
+<div class="bg-text">
+	<h2 style="text-shadow: 2px 2px dimgray;">Sign Up!</h2>
+	<div class="nav-links">
+		<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="login.html">Log In</a></li>
+	<li><a href="aboutus.html">About Us</a></li>
+	<li><a href="events.html">Events</a></li>
+	</ul>
+</div>
+	<form action="signup_proc.php" method="POST">
+
+		<input type="text" id="fname" placeholder="First Name" size="20" maxlength="45" name="fname"><br>
+
+
+		<input type="text" id="lname" placeholder="Last Name" size="20" maxlength="45" name="lname"><br>
+
+
+		<input type="email" id="useremail" placeholder="Email address" size="20" maxlength="60" name="useremail"><br>
+
+
+		
+		<input type="password" id="password" placeholder="Password" size="20" maxlength="60" name="password"><br>
+
+
+
+		<select name = "dropSelect">
+         <option value="holding">Select:</option>
+         <option value="4">Customer</option>
+         <option value="3">Content Creator</b></option>
+      </select>
+		<input type="submit" name="submitbuttn">
+
+
+	</form>
+	
+</div>
+
+
+</body>
+
+</html>
