@@ -22,7 +22,7 @@ h2 {
 
 .index_bg-image {
   /* The image used */
-  background-image: url("assets/womancook.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook.jpg");
 
   /* Add the blur effect */
   filter: blur(1px);
@@ -30,6 +30,7 @@ h2 {
 
   /* Full height */
   height: 100%; 
+  width: 100;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -39,7 +40,7 @@ h2 {
 
 .signIn_bg-image {
   /* The image used */
-  background-image: url("assets/womancook3.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook3.jpg");
 
   /* Add the blur effect */
   filter: blur(1px);
@@ -56,7 +57,7 @@ h2 {
 
 .logIn_bg-image {
   /* The image used */
-  background-image: url("assets/womancook2.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook2.jpg");
 
   /* Add the blur effect */
 
@@ -73,7 +74,7 @@ h2 {
 
 .Aboutus_bg-image {
   /* The image used */
-  background-image: url("assets/childcook.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/childcook.jpg");
 
   /* Add the blur effect */
 filter: blur(2px);
@@ -90,7 +91,7 @@ filter: blur(2px);
 
 .Events_bg-image {
   /* The image used */
-  background-image: url("assets/womancook4.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook4.jpg");
 
   /* Add the blur effect */
 filter: blur(1px);
@@ -107,7 +108,7 @@ filter: blur(1px);
 
 .Sub_bg-image {
   /* The image used */
-  background-image: url("assets/womancook5.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook5.jpg");
 
   /* Add the blur effect */
 filter: blur(1px);
@@ -124,7 +125,7 @@ filter: blur(1px);
 
 .recipe_bg-image {
   /* The image used */
-  background-image: url("assets/womancook6.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook6.jpg");
 
   /* Add the blur effect */
 filter: blur(1px);
@@ -141,7 +142,7 @@ filter: blur(1px);
 
 .AI_bg-image {
   /* The image used */
-  background-image: url("assets/womancook7.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook7.jpg");
 
   /* Add the blur effect */
 filter: blur(1px);
