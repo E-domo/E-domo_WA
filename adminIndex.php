@@ -25,7 +25,6 @@
 					<li><a href="CCapproval.php">CC Approval</a></li>	
 					<li><a href="recipeForm.php">Recipe Form</a></li>
 					<li><a href="recipeApprov.php">Recipe Approval</a></li>
-					<li><a href="eventForm.php">Event Form</a></li>				
 				</ul>
 
 			</div>

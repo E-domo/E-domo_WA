@@ -17,7 +17,6 @@
 	<li><a href="index.php">Home</a></li>
 	<li><a href="signUp.php">Sign Up</a></li>
 	<li><a href="aboutus.php">About Us</a></li>
-	<li><a href="events.php">Events</a></li>
 
 	</ul>
 </div>

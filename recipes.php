@@ -28,7 +28,6 @@
 						echo "<ul>
 							<li><a href='index.php'>Home</a></li>
 							<li><a href='aboutus.html'>About Us</a></li>
-							<li><a href='events.php'>Events</a></li>
 							<li><a href='recipes.php'>Recipes</a></li>
 							<li><a href='logout.php'>Logout</a></li>
 							</ul>";
@@ -38,7 +37,6 @@
 							<li><a href='login.html' id='login'>Log In</a></li>
 							<li><a href='index.php'>Home</a></li>
 							<li><a href='aboutus.html'>About Us</a></li>
-							<li><a href='events.php'>Events</a></li>
 							<li><a href='recipes.php'>Recipes</a></li>	
 							</ul>";
 					}

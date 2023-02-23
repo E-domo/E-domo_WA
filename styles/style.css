@@ -366,15 +366,12 @@ nav{
 
 button {
   width: 80px;
-<<<<<<< HEAD:styles/style.css
   height: 40px;
   margin-right: 10px;
   border-radius: 30px;
   cursor: pointer;
-
-=======
   height: 50px;
->>>>>>> a3e969da8be8240fe2535107361ec513c67d49a1:style.css
+
 }
 
 .approve{
