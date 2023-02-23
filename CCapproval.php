@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -42,6 +42,7 @@
 	<p>Name: Nadine Nadone</p> <p>Email: nadiyahyah@yahoo.com</p>
 
 <button class="approve btn">Approve</button><button class="deny btn">Deny</button>
+
 <div class="confirmPopup"><h3>You Sure?</h3>
 	<button>Confirm</button>
 </div>
@@ -59,5 +60,8 @@
 
 
 </body>
+<script type="text/javascript">
+ 	
+</script>
 
 </html>

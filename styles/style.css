@@ -382,6 +382,7 @@ button {
   height: 40px;
   margin-right: 10px;
   border-radius: 30px;
+  cursor: pointer;
 
 }
 
