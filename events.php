@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+ ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,12 +23,30 @@
 			<nav class="nav">
 			
 			<div class="nav-links">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="signup.html">Sign Up</a></li>
-					<li><a href="login.html">Log In</a></li>
-					<li><a href="aboutus.html">About Us</a></li>
-				</ul>
+				<?php 
+
+					// if ($session_status) {
+						if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
+							echo "<ul>
+								<li><a href='index.php'>Home</a></li>
+								<li><a href='aboutus.html'>About Us</a></li>
+								<li><a href='events.php'>Events</a></li>
+								<li><a href='recipes.php'>Recipes</a></li>
+								<li><a href='logout.php'>Logout</a></li>
+								</ul>";
+							
+						}else{
+							echo "<ul>
+								<li><a href='index.php'>Home</a></li>
+								<li><a href='signup.html' id='signup'>Sign Up</a></li>
+								<li><a href='login.html' id='login'>Log In</a></li>
+								<li><a href='aboutus.html'>About Us</a></li>
+								<li><a href='events.php'>Events</a></li>
+								<li><a href='recipes.php'>Recipes</a></li>	
+								</ul>";
+							}
+					
+			?>
 			</div>
 		</nav>
 		<p style="color: gray; text-shadow: 1px 1px black"> &darr; &darr; scroll down to see recent events &darr; &darr;;</p>
@@ -54,9 +76,11 @@
 </html>
 
 
-
+<!-- 
 <?php
 
-	
+	// if ($_SESSION['']) {
+	// 	# code...
+	// }
 
-?>
+?> -->

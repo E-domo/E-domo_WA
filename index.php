@@ -1,5 +1,5 @@
-<<?php 
-session_start()
+<?php 
+session_start();
  ?>
 
 <!DOCTYPE html>
@@ -23,13 +23,13 @@ session_start()
 			<nav class="nav">
 			
 			<div class="nav-links">
-			<<?php 
+			<?php 
 
-					if ($_SESSION['userType'] == 4 || $_SESSION['userType'] == 3) {
+					if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
 						echo "<ul>
 							<li><a href='aboutus.html'>About Us</a></li>
-							<li><a href='events.html'>Events</a></li>
-							<li><a href='recipes.html'>Recipes</a></li>
+							<li><a href='events.php'>Events</a></li>
+							<li><a href='recipes.php'>Recipes</a></li>
 							<li><a href='logout.php'>Logout</a></li>
 							</ul>";
 					}else{
@@ -37,8 +37,8 @@ session_start()
 							<li><a href='signup.html' id='signup'>Sign Up</a></li>
 							<li><a href='login.html' id='login'>Log In</a></li>
 							<li><a href='aboutus.html'>About Us</a></li>
-							<li><a href='events.html'>Events</a></li>
-							<li><a href='recipes.html'>Recipes</a></li>	
+							<li><a href='events.php'>Events</a></li>
+							<li><a href='recipes.php'>Recipes</a></li>	
 							</ul>";
 					}
 					
