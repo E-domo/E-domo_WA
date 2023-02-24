@@ -22,7 +22,7 @@ h2 {
 
 .index_bg-image {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), black), url("assets/womancook.jpg");
 
   /* Add the blur effect */
   filter: blur(1px);
@@ -40,7 +40,7 @@ h2 {
 
 .signIn_bg-image {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook3.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), black), url("assets/womancook3.jpg");
 
   /* Add the blur effect */
   filter: blur(1px);
@@ -57,7 +57,7 @@ h2 {
 
 .logIn_bg-image {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook2.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), black), url("assets/womancook2.jpg");
 
   /* Add the blur effect */
 
@@ -74,7 +74,7 @@ h2 {
 
 .Aboutus_bg-image {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/childcook.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), black), url("assets/childcook.jpg");
 
   /* Add the blur effect */
 filter: blur(2px);
@@ -91,7 +91,7 @@ filter: blur(2px);
 
 .Events_bg-image {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook4.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), black), url("assets/womancook4.jpg");
 
   /* Add the blur effect */
 filter: blur(1px);
@@ -108,7 +108,7 @@ filter: blur(1px);
 
 .Sub_bg-image {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook5.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), black), url("assets/womancook5.jpg");
 
   /* Add the blur effect */
 filter: blur(1px);
@@ -125,7 +125,7 @@ filter: blur(1px);
 
 .recipe_bg-image {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook6.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), black), url("assets/womancook6.jpg");
 
   /* Add the blur effect */
 filter: blur(1px);
@@ -142,7 +142,7 @@ filter: blur(1px);
 
 .AI_bg-image {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("assets/womancook7.jpg");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52),black), url("assets/womancook7.jpg");
 
   /* Add the blur effect */
 filter: blur(1px);
@@ -172,7 +172,7 @@ filter: blur(1px);
 }
 
 input {
-  border: 2px solid #e3bc9a;
+  border: 2px solid lightsteelblue;
   border-radius: 4px;
   width: 60%;
   padding: 12px 20px;
@@ -188,10 +188,10 @@ form {
 
 
 input:focus {
-  background-color: #e3bc9a;
+  background-color: lightsteelblue;
 }
 input[type=submit]:hover{
-  background-color: #e3bc9a;
+  background-color: lightsteelblue;
 }
 
 label {
@@ -250,7 +250,8 @@ nav{
     height: 35px;
     bottom: 27px;
     right: 10%;
-    background: #e3bc9a;
+    background: lightsteelblue;
+    opacity: 0.5;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -322,9 +323,47 @@ nav{
   flex-wrap: wrap;
   padding-left: 50px;
   border-radius: 10px;
-  box-shadow: 0 0 5px 10px #e3bc9a;
+  box-shadow: 0 0 5px 10px lightsteelblue;
   margin: 10px;
 
+}
+
+.approval{
+  height: 200px;
+  width: 98.5%;
+   border-radius: 10px;
+  box-shadow: 0 0 5px 10px lightsteelblue;
+  margin: 10px;
+}
+
+.confirmPopup{
+  width: 500px;
+  background: ghostwhite;
+  border-radius: 6px;
+  border: 2px solid steelblue;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  visibility: hidden;
+  padding: 0px 90px 30px 90px;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.openPopup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+
+}
+
+.confirmPopup h2{
+  font-size: 70px;
+}
+
+.confirmPopup button{
+  margin-left: 100px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .recipe img {

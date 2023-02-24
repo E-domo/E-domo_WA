@@ -16,7 +16,6 @@
 		<ul>
 	<li><a href="index.php">Home</a></li>
 	<li><a href="login.php">Log In</a></li>
-	<li><a href="aboutus.php">About Us</a></li>
 	</ul>
 </div>
 	<form action="signup_proc.php" method="POST">

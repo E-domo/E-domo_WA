@@ -30,7 +30,6 @@
 						if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
 							echo "<ul>
 								<li><a href='index.php'>Home</a></li>
-								<li><a href='aboutus.html'>About Us</a></li>
 								<li><a href='events.php'>Events</a></li>
 								<li><a href='recipes.php'>Recipes</a></li>
 								<li><a href='logout.php'>Logout</a></li>
@@ -41,8 +40,7 @@
 								<li><a href='index.php'>Home</a></li>
 								<li><a href='signup.html' id='signup'>Sign Up</a></li>
 								<li><a href='login.html' id='login'>Log In</a></li>
-								<li><a href='aboutus.html'>About Us</a></li>
-								<li><a href='events.php'>Events</a></li>
+\								<li><a href='events.php'>Events</a></li>
 								<li><a href='recipes.php'>Recipes</a></li>	
 								</ul>";
 							}
