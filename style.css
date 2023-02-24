@@ -1,0 +1,387 @@
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 200px;
+  margin: 0px;
+}
+
+h2 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 150px;
+  margin: 0px;
+}
+
+.index_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook.jpg");
+
+  /* Add the blur effect */
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signIn_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook3.jpg");
+
+  /* Add the blur effect */
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logIn_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook2.jpg");
+
+  /* Add the blur effect */
+
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Aboutus_bg-image {
+  /* The image used */
+  background-image: url("assets/childcook.jpg");
+
+  /* Add the blur effect */
+filter: blur(2px);
+  -webkit-filter: blur(2px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Events_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook4.jpg");
+
+  /* Add the blur effect */
+filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Sub_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook5.jpg");
+
+  /* Add the blur effect */
+filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.recipe_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook6.jpg");
+
+  /* Add the blur effect */
+filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.AI_bg-image {
+  /* The image used */
+  background-image: url("assets/womancook7.jpg");
+
+  /* Add the blur effect */
+filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 85%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+input {
+  border: 2px solid #e3bc9a;
+  border-radius: 4px;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  align-self: right;
+}
+
+form {
+  text-align: center;
+  margin: 0px 200px 0px 200px;
+}
+
+
+input:focus {
+  background-color: #e3bc9a;
+}
+input[type=submit]:hover{
+  background-color: #e3bc9a;
+}
+
+label {
+  text-shadow:-1px -1px black;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.recipenav{
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    width: 100%;
+    height: 80px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+    padding-top: 5px;
+}
+.recipe_nav-links{
+    flex: 1;
+    text-align: right;
+    padding-top: 5px;
+}
+
+
+.nav-links ul{
+    text-align: center;
+    text-shadow: 2px 2px dimgray;
+    padding: 0px;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color:  #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    position: relative;
+    height: 35px;
+    bottom: 27px;
+    right: 10%;
+    background: #e3bc9a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    z-index: -1;
+    border-radius: 10px;
+
+}
+
+.nav-links ul li:hover::after{
+    width: 120%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 180px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.subcolumn{
+    flex: 33%;
+    padding: 0 4px;
+    border-style: solid; 
+    border-width: medium; 
+    border-color: lightseagreen;
+    margin-right: 2px;
+    padding-bottom: 20px;
+}
+.subname{
+   text-align: center;
+   font-weight: bold;
+   font-style: italic;
+   font-size: 20px;
+}
+.price{
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Create two equal columns that sits next to each other */
+.boldword{
+  inline-size: auto;
+  font-weight: bold;
+}
+
+.column {
+  flex: 33%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 80%;
+  margin-left: 50px;
+}
+
+.title {
+  font-weight: bold;
+  text-shadow: 2px 2px dimgray;
+}
+
+.recipe {
+  height: 200px;
+  width: 98.5%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 10px #e3bc9a;
+  margin: 10px;
+
+}
+
+.recipe img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  object-fit: fill;
+}
+
+.recipe p {
+  width: 30%;
+  margin-left: 10px;
+}
+
+.adminbutton {
+  background-color: #199319;
+  color: white;
+  text-decoration: none;
+}
+
+
+.Packagebtn {
+  color: dimgray;
+  text-decoration: none;
+  position: absolute; 
+  bottom: -47%;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  text-align: center;
+  width: 23.5%;
+}
+
+.Packagebtn:hover{
+  color: black;
+  font-weight: bold;
+}
+
+button {
+  width: 80px;
+  height: 50px;
+}
+
+.approve{
+  background-color: green;
+}
+
+.deny{
+  background-color: red;
+}
+
+
+
+select {
+  width: 60%;
+  padding: 10px
+}
+
+

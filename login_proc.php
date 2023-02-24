@@ -4,7 +4,7 @@
 	{
 		//collection form data
 		$user_email =  $_POST['useremail'];
-		$user_pass = $_POST['password'];
+		$user_pass = $_POST['upassword'];
 
 		//database connection parameters
 		$servername = "localhost";

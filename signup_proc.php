@@ -7,7 +7,7 @@ if (isset($_POST['submitbuttn']))
 {
 	//collection form data
 	$user_fname = $_POST['fname'];
-	$user_name = $_POST['lname'];
+	$user_lname = $_POST['lname'];
 	$user_email = $_POST['useremail'];
 	$user_pass = $_POST['password'];
 	$subs = $_POST['dropSelect'];
@@ -40,7 +40,7 @@ if (isset($_POST['submitbuttn']))
 	if ($conn->query($sql) === TRUE) {
 	  
 		//redirect to homepage
-		header("Location: logIn.html");
+		header("Location: index.php");
 		exit();
 
 	} else {
@@ -54,7 +54,7 @@ if (isset($_POST['submitbuttn']))
 else
 {
 	//redirect to register page
-	header("Location: signUp.html");
+	header("Location: signUp.php");
 	echo "<script>console.log('Did not work' );</script>";
 	exit();
 }
