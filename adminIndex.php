@@ -1,8 +1,17 @@
+<?php 
+session_start();
+	if (isset($_SESSION['userType']) != 1) {
+		header("Location: logIn.php");
+		exit();
+	}
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -21,11 +30,10 @@
 			
 			<div class="nav-links">
 				<ul>
-					<li><a href="index.html">Log Out</a></li>
-					<li><a href="CCapproval.html">CC Approval</a></li>	
-					<li><a href="recipeForm.html">Recipe Form</a></li>
-					<li><a href="recipeApprov.html">Recipe Approval</a></li>
-					<li><a href="eventForm.html">Event Form</a></li>				
+					<li><a href="logout.php">Log Out</a></li>
+					<li><a href="CCapproval.php">CC Approval</a></li>	
+					<li><a href="recipeForm.php">Recipe Form</a></li>
+					<li><a href="recipeApprov.php">Recipe Approval</a></li>
 				</ul>
 
 			</div>

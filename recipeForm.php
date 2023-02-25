@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Recipe Form</title>
 </head>
@@ -14,9 +14,9 @@
 	<h2 style="text-shadow: 2px 2px dimgray;">Recipe Form</h2>
 	<div class="nav-links">
 		<ul>
-	<li><a href="index.html">Home</a></li>
-	<li><a href="recipes.html">Recipes</a></li>	
-	<li><a href="recipeApprov.html">Pending Approvals</a></li>
+	<li><a href="index.php">Home</a></li>
+	<li><a href="recipes.php">Recipes</a></li>	
+	<li><a href="recipeApprov.php">Pending Approvals</a></li>
 	</ul>
 </div>
 	<form id = "recipeform" action="recipe_proc.php">

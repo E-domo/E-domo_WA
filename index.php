@@ -6,7 +6,7 @@ session_start();
 <html>
 
 <head>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -23,21 +23,20 @@ session_start();
 			<nav class="nav">
 			
 			<div class="nav-links">
-			<?php 
 
+			<?php 
 					if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
-						echo "<ul>
-							<li><a href='aboutus.html'>About Us</a></li>
-							<li><a href='events.php'>Events</a></li>
+						$user_fname = $_SESSION['firstName'];
+						echo "
+						<h3 style='text-shadow:2px 2px dimgray;'>Welcome home $user_fname</h3>
+						<ul>
 							<li><a href='recipes.php'>Recipes</a></li>
 							<li><a href='logout.php'>Logout</a></li>
 							</ul>";
 					}else{
 						echo "<ul>
-							<li><a href='signup.html' id='signup'>Sign Up</a></li>
-							<li><a href='login.html' id='login'>Log In</a></li>
-							<li><a href='aboutus.html'>About Us</a></li>
-							<li><a href='events.php'>Events</a></li>
+							<li><a href='signUp.php' id='signup'>Sign Up</a></li>
+							<li><a href='logIn.php' id='login'>Log In</a></li>
 							<li><a href='recipes.php'>Recipes</a></li>	
 							</ul>";
 					}

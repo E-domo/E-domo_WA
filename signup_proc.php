@@ -7,9 +7,10 @@ if (isset($_POST['submitbuttn']))
 {
 	//collection form data
 	$user_fname = $_POST['fname'];
-	$user_name = $_POST['lname'];
+	$user_lname = $_POST['lname'];
 	$user_email = $_POST['useremail'];
 	$user_pass = $_POST['password'];
+	$user_pass2 = $_POST['password_conf'];
 	$subs = $_POST['dropSelect'];
 
 	//database connection parameters
@@ -28,6 +29,13 @@ if (isset($_POST['submitbuttn']))
 
 	//encrypt password
 	//use the php password_hard function
+	if ($user_pass != $user_pass2) {
+		header("Location: signUp.php");
+		exit();
+		echo '<script type="text/javascript">';
+		echo ' alert("Passwords do not match!")';  
+		echo '</script>';
+	}
 	$encrypted_pass = password_hash($user_pass, PASSWORD_DEFAULT);
 
 	//write query 
@@ -40,7 +48,7 @@ if (isset($_POST['submitbuttn']))
 	if ($conn->query($sql) === TRUE) {
 	  
 		//redirect to homepage
-		header("Location: logIn.html");
+		header("Location: index.php");
 		exit();
 
 	} else {
@@ -54,7 +62,7 @@ if (isset($_POST['submitbuttn']))
 else
 {
 	//redirect to register page
-	header("Location: signUp.html");
+	header("Location: signUp.php");
 	echo "<script>console.log('Did not work' );</script>";
 	exit();
 }

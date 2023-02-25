@@ -4,7 +4,7 @@
 	{
 		//collection form data
 		$user_email =  $_POST['useremail'];
-		$user_pass = $_POST['password'];
+		$user_pass = $_POST['upassword'];
 
 		//database connection parameters
 		$servername = "localhost";
@@ -29,13 +29,13 @@
 			echo "<script>console.log('This works')</script>";
 			$row = $result->fetch_assoc();
 			$userID = $row['userIndex'];
+			$user_Fname = $row['fname'];
 			$user_Email = $row['userEmail'];
 			$user_PassdB = $row['userPassword'];
 			$user_Type = $row['typeIndex'];
 
  		}else{
 			header("Location: logIn.html");
-			echo "<script>console.log('This doesn't work')</script>";
 			exit();
 			alert("User does not exist");
 		}
@@ -57,6 +57,7 @@
 		session_start();
 		$_SESSION["userID"] = $userID;
 		$_SESSION["userEmail"] = $user_Email;
+		$_SESSION["firstName"] = $user_Fname;
 		$_SESSION["userType"] = $user_Type;
 
 		if ($_SESSION["userType"] == 1){

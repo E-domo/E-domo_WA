@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -31,9 +31,10 @@
 <div class="approval" id="approv1">
 	<p>Name: Deldk the donnny don</p> <p>Email: delasi@yahoo.com</p>
 
-<button class="approve btn">Approve</button><button class="deny btn">Deny</button>
-<div class="confirmPopup"><h3>You Sure?</h3>
-	<button>Confirm</button>
+<button class="approve btn" onclick="op1()">Approve</button><button class="deny btn" onclick="op1()">Deny</button>
+
+<div class="confirmPopup" id="pop1"><h3>You Sure?</h3>
+	<button onclick="cl1()">Confirm</button>
 </div>
 
 </div>
@@ -41,9 +42,10 @@
 <div class="approval" id="approv2">
 	<p>Name: Nadine Nadone</p> <p>Email: nadiyahyah@yahoo.com</p>
 
-<button class="approve btn">Approve</button><button class="deny btn">Deny</button>
-<div class="confirmPopup"><h3>You Sure?</h3>
-	<button>Confirm</button>
+<button class="approve btn" onclick="op2()">Approve</button><button class="deny btn" onclick="op2()">Deny</button>
+
+<div class="confirmPopup" id="pop2"><h3>You Sure?</h3>
+	<button onclick="cl2()">Confirm</button>
 </div>
 
 
@@ -51,7 +53,11 @@
 <div class="approval" id="approv3">
 	<p>Name: Ann Vann Kablam</p> <p>Email: lilAnnieVannie@gmail.com</p>
 
-<button class="approve btn">Approve</button><button class="deny btn">Deny</button>
+<button class="approve btn" onclick="op3()">Approve</button><button class="deny btn" onclick="op3()">Deny</button>
+
+<div class="confirmPopup" id="pop3"><h2>You Sure?</h2>
+	<button onclick="cl3()">Confirm</button>
+</div>
 
 
 </div>
@@ -59,5 +65,34 @@
 
 
 </body>
+<script type="text/javascript">
+	let popup1 = document.getElementById('pop1');
+	let popup2 = document.getElementById('pop2');
+	let popup3 = document.getElementById('pop3');
+
+	function op1(){
+		popup1.classList.add("openPopUp")
+	}
+		function cl1(){
+		popup1.classList.remove("openPopUp")
+	} 
+
+	function op2(){
+		popup2.classList.add("openPopUp")
+	}
+		function cl2(){
+		popup2.classList.remove("openPopUp")
+	} 
+
+	function op3(){
+		popup3.classList.add("openPopUp")
+	}
+		function cl3(){
+		popup3.classList.remove("openPopUp")
+	} 
+
+
+
+</script>
 
 </html>
