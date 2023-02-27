@@ -10,7 +10,7 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<title>E domo</title>
+<title>E Domo</title>
 
 <body>
 
