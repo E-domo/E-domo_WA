@@ -25,7 +25,7 @@ session_start();
 			<div class="nav-links">
 
 			<?php 
-					if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
+					if ((isset($_SESSION['userType']) == 3) || (isset($_SESSION['userType']) == 4)) {
 						$user_fname = $_SESSION['firstName'];
 						echo "
 						<h3 style='text-shadow:2px 2px dimgray;'>Welcome home $user_fname</h3>
