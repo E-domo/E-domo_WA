@@ -26,7 +26,7 @@
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0){
-			echo "<script>alert('This works')</script>";
+			echo "<script>console.log('This works')</script>";
 			$row = $result->fetch_assoc();
 			$userID = $row['userIndex'];
 			$user_Fname = $row['fname'];
@@ -38,9 +38,11 @@
 			header("Location: logIn.php");
 			echo "<script>alert('User does not exist')</script>";
 			exit('issue 1');
+
 		}
 
 		if (password_verify($user_pass, $user_PassdB)){
+			echo "<script>console.log('This works as well')</script>";
 			session_start();
 			$_SESSION["userID"] = $userID;
 			$_SESSION["userEmail"] = $user_Email;
@@ -48,21 +50,21 @@
 			$_SESSION["userType"] = $user_Type;
 
 			if ($_SESSION["userType"] == 1){
-				echo "<script>alert('You are an admin')</script>";	
+				echo "<script>console.log('You are an admin')</script>";	
 				header("Location: adminIndex.php");
 				exit();
 			}elseif($_SESSION["userType"] == 3){
-				echo "<script>alert('You are a customer')</script>";	
+				echo "<script>console.log('You are a customer')</script>";	
 				header("Location: index.php");
 				exit();
 			}elseif($_SESSION["userType"] == 4){
-				echo "<script>alert('you are a content creator')</script>";	
+				echo "<script>console.log('you are a content creator')</script>";	
 				header("Location: index.php");
 				exit();
 			}
 		}else{
 			header("Location: logIn.php");
-			echo "<script>alert('There was an issue1')</script>";	
+			echo "<script>console.log('There was an issue1')</script>";	
 			exit();
 			}
 
@@ -88,7 +90,7 @@
 	}else{
 		
 		header("Location: login.php");
-			echo "<script>alert('There was an issue2')</script>";	
+			echo "<script>consle.log('There was an issue2')</script>";	
 		exit();
 	}
 ?>
