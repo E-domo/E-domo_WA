@@ -34,11 +34,14 @@
 		<input type="password" id="password" name="password" placeholder="Password" size="20" maxlength="60"><br>
 
 
+		<input type="password" id="password_conf" name="password_conf" placeholder="Confirm Password" size="20" maxlength="60"><br>
+
+
 
 		<select name = "dropSelect" id="subscription">
          <option value="holding">Select:</option>
-         <option value="4">Customer</option>
-         <option value="3">Content Creator</b></option>
+         <option value=3>Customer</option>
+         <option value=4>Content Creator</b></option>
 
       </select>
 		<input type="submit" name="submitbuttn" id="submitbuttn" value="Submit">

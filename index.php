@@ -23,17 +23,23 @@ session_start();
 			<nav class="nav">
 			
 			<div class="nav-links">
-			<?php 
 
-					if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
-						echo "<ul>
+			<?php 
+					if ((isset($_SESSION['userType']) == 3) || (isset($_SESSION['userType']) == 4)) {
+						$user_fname = $_SESSION['firstName'];
+						echo "
+						<h3 style='text-shadow:2px 2px dimgray;'>Welcome home $user_fname</h3>
+						<ul>
+
 							<li><a href='recipes.php'>Recipes</a></li>
 							<li><a href='logout.php'>Logout</a></li>
 							</ul>";
 					}else{
 						echo "<ul>
-							<li><a href='signup.php' id='signup'>Sign Up</a></li>
-							<li><a href='login.php' id='login'>Log In</a></li>
+
+							<li><a href='signUp.php' id='signup'>Sign Up</a></li>
+							<li><a href='logIn.php' id='login'>Log In</a></li>
+
 							<li><a href='recipes.php'>Recipes</a></li>	
 							</ul>";
 					}
