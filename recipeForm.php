@@ -24,13 +24,13 @@ session_start();
 	<li><a href="recipeApprov.php">Pending Approvals</a></li>
 	</ul>
 </div>
-	<form enctype="multipart/form-data">
+	<form enctype="multipart/form-data" method="POST" action="recipes_proc.php">
 
-		<input type="text" id="rname" name="rname" placeholder="Recipe Name" size="20" maxlength="45" required><br>
+		<input type="text" id="rName" name="rName" placeholder="Recipe Name" size="20" maxlength="45" required><br>
 		<input type="text" id="headline" name="headline" placeholder="Country of Origin" size="20" maxlength="15" required><br>
 
 
-		<input type="textarea" id="rDesc" name="rDesc" placeholder="Recipe Description" size="20" maxlength="300" required><br>
+		<input type="textarea" id="rDesc" name="rDesc" placeholder="Recipe Description" size="20" maxlength="300" rows="5" required><br>
 		<input type="textarea" id="rIngredients" name="rIngredients" placeholder="Numbered Ingredients" size="20" maxlength="500" style = "margin: 8px 0px 16px 0px;" required><br>
 		
 		<input type="textarea" rows = "5" cols = "60" id="rInstructions" name="rInstructions" placeholder="Numbered Cooking Steps" maxlength="500" style = "margin: 8px 0px 16px 0px;" required><br>
@@ -51,7 +51,7 @@ session_start();
 		alert('wahalla oh');
 		function loadRecipe(){
 			alert('loading recipe');
-			var recipeName = document.getElementById('rname');
+			var recipeName = document.getElementById('rName');
 			var headline = document.getElementById('headline');
 			var recipeDesc = document.getElementById('rDesc');
 			var recipeIngredients = document.getElementById('rIngredients');
