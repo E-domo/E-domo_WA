@@ -19,7 +19,7 @@ session_start();
 	<h2 style="text-shadow: 2px 2px dimgray;">Recipe Form</h2>
 	<div class="nav-links">
 		<ul>
-	<li><a href="index.php">Home</a></li>
+	<li><a href="adminIndex.php">Admin Home</a></li>
 	<li><a href="recipes.php">Recipes</a></li>	
 	<li><a href="recipeApprov.php">Pending Approvals</a></li>
 	</ul>
@@ -30,10 +30,11 @@ session_start();
 		<input type="text" id="headline" name="headline" placeholder="Country of Origin" size="20" maxlength="15" required><br>
 
 
-		<input type="textarea" id="rDesc" name="rDesc" placeholder="Recipe Description" size="20" maxlength="300" rows="5" required><br>
-		<input type="textarea" id="rIngredients" name="rIngredients" placeholder="Numbered Ingredients" size="20" maxlength="500" style = "margin: 8px 0px 16px 0px;" required><br>
-		
-		<input type="textarea" rows = "5" cols = "60" id="rInstructions" name="rInstructions" placeholder="Numbered Cooking Steps" maxlength="500" style = "margin: 8px 0px 16px 0px;" required><br>
+		<textarea  name="Rdescription" placeholder="Recipe Description" required></textarea><br>
+
+		<textarea  name="Ringredients" placeholder="Recipe Ingredients" required></textarea><br>
+
+		<textarea name="Rinstructions" placeholder="Cooking steps" required></textarea><br>
 
 
 		<input type="file" name="rImage" accept="image/png, image/jpeg" id="rImage" style="display: none;">
@@ -48,7 +49,9 @@ session_start();
 
 	<!-- script -->
 	<script type="text/javascript">
-		alert('wahalla oh');
+
+		document.querySelector("textarea").setSelectionRange(0,0); // place cursor at start
+
 		function loadRecipe(){
 			alert('loading recipe');
 			var recipeName = document.getElementById('rName');
@@ -101,6 +104,7 @@ session_start();
 
 
 	</script>
+
 
 
 </body>

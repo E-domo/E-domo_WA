@@ -4,10 +4,6 @@
 			header("Location: logIn.php");
 			exit();
 		}
-	else{
-		echo "success";
-		}
-
 	?>
 
 <!DOCTYPE html>
@@ -26,7 +22,7 @@
 
 		<div class="bg-text">
 			<h1 style="text-shadow:2px 2px dimgray;">
-				E domo
+				E-Domo
 			</h1>
 			<h3 style="color:whitesmoke; text-shadow:2px 2px dimgray;">ADMIN</h3>
 			<nav class="nav">

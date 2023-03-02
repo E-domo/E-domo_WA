@@ -35,7 +35,7 @@
 			$user_Type = $row['typeIndex'];
 
  		}else{
-			header("Location: logIn.html");
+			header("Location: logIn.php");
 			echo "<script>alert('User does not exist')</script>";
 			exit('issue 1');
 		}

@@ -36,10 +36,9 @@
 					if (isset($_SESSION['userType']) == 4 || isset($_SESSION['userType']) == 3) {
 						$user_fname = $_SESSION['firstName'];
 						echo "
-						<h3 style='text-shadow:2px 2px dimgray;'>Welcome home $user_fname</h3>
+						<p style='text-shadow:2px 2px dimgray;'>Let's find out $user_fname</p>
 						<ul>
 							<li><a href='index.php'>Home</a></li>
-							<li><a href='recipes.php'>Recipes</a></li>
 							<li><a href='logout.php'>Logout</a></li>
 							</ul>";
 					}else{

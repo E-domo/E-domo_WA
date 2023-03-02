@@ -1,3 +1,12 @@
+	<?php
+	session_start();
+	if (isset($_SESSION['userType']) != 1) {
+			header("Location: logIn.php");
+			exit();
+		}
+
+	?>
+
 <!DOCTYPE html>
 <html>
 
@@ -69,12 +78,19 @@
 	let popup1 = document.getElementById('pop1');
 	let popup2 = document.getElementById('pop2');
 	let popup3 = document.getElementById('pop3');
+	let approv1 = document.getElementById('approv1');
+	let approv2 = document.getElementById('approv2');
+	let approv3 = document.getElementById('approv3');
 
 	function op1(){
 		popup1.classList.add("openPopUp")
 	}
 		function cl1(){
 		popup1.classList.remove("openPopUp")
+		approv1.innerHTML= ""
+		approv1.style.backgroundColor = "gray"
+		approv1.style.border = "thick dashed white";
+
 	} 
 
 	function op2(){
@@ -82,6 +98,9 @@
 	}
 		function cl2(){
 		popup2.classList.remove("openPopUp")
+		approv2.innerHTML= ""
+		approv2.style.backgroundColor = "gray"
+		approv2.style.border = "thick dashed white";
 	} 
 
 	function op3(){
@@ -89,6 +108,9 @@
 	}
 		function cl3(){
 		popup3.classList.remove("openPopUp")
+		approv3.innerHTML= ""
+		approv3.style.backgroundColor = "gray"
+		approv3.style.border = "thick dashed white";
 	} 
 
 
