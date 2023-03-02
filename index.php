@@ -10,7 +10,7 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<title>E domo</title>
+<title>E Domo</title>
 
 <body>
 
@@ -30,13 +30,16 @@ session_start();
 						echo "
 						<h3 style='text-shadow:2px 2px dimgray;'>Welcome home $user_fname</h3>
 						<ul>
+
 							<li><a href='recipes.php'>Recipes</a></li>
 							<li><a href='logout.php'>Logout</a></li>
 							</ul>";
 					}else{
 						echo "<ul>
+
 							<li><a href='signUp.php' id='signup'>Sign Up</a></li>
 							<li><a href='logIn.php' id='login'>Log In</a></li>
+
 							<li><a href='recipes.php'>Recipes</a></li>	
 							</ul>";
 					}
