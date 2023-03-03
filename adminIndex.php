@@ -1,10 +1,10 @@
 <?php 
 session_start();
 	if (isset($_SESSION['userType']) != 1) {
-			header("Location: logIn.php");
-			exit();
-		}
-	?>
+		header("Location: logIn.php");
+		exit();
+	}
+ ?>
 
 <!DOCTYPE html>
 <html>

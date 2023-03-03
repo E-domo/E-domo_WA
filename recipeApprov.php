@@ -18,8 +18,10 @@
 			
 			<div class="nav-links">
 				<ul style="text-align: left;">
-					<li><a href="adminIndex.php" style="color: dimgray; text-shadow:0px 0px dimgray;">Admin Home</a></li>
-					<li><a href="index.php" style="color: dimgray; text-shadow:0px 0px dimgray;">Logout</a></li>
+					<li><a href="adminIndex.php" style="color: dimgray; text-shadow:0px 0px dimgray;">Home</a></li>
+					<li><a href="recipeForm.php"  style="color: dimgray; text-shadow:0px 0px dimgray;">Recipe Form</a></li>
+					<li><a href="CCapproval.php"  style="color: dimgray; text-shadow:0px 0px dimgray;">CC Approval</a></li>	
+					<li><a href="logout.php"  style="color: dimgray; text-shadow:0px 0px dimgray;">Log Out</a></li>
 				</ul>
 
 			</div>

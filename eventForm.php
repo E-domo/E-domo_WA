@@ -15,8 +15,10 @@
 	<h2 style="text-shadow: 2px 2px dimgray;">Event Form</h2>
 	<div class="nav-links">
 		<ul>
-	<li><a href="adminIndex.php">Admin Home</a></li>
+	<li><a href="adminIndex.php">Home</a></li>
 	<li><a href="recipeForm.php">Recipe Form</a></li>
+	
+	<li><a href="logout.php">Log Out</a></li>
 
 	</ul>
 </div>

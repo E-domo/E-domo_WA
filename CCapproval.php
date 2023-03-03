@@ -27,8 +27,10 @@
 			
 			<div class="nav-links">
 				<ul style="text-align: left;">
-					<li><a href="adminIndex.php" style="color: dimgray; text-shadow:0px 0px dimgray;">Admin Home</a></li>
-					<li><a href="index.php" style="color: dimgray; text-shadow:0px 0px dimgray;">Logout</a></li>
+					<li><a href="adminIndex.php">Home</a></li>
+					<li><a href="recipeForm.php">Recipe Form</a></li>
+					<li><a href="recipeApprov.php">Recipe Approval</a></li>
+					<li><a href="logout.php">Log Out</a></li>
 				</ul>
 
 			</div>
