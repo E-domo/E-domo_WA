@@ -21,9 +21,9 @@
 		  die("Connection failed: " . $conn->connect_error);
 		} 
 
-        $sql = "UPDATE recipes SET status=1 WHERE recipeNo='$buttn_value'";
+        $sql = "UPDATE users SET typeIndex=2 WHERE userIndex='$buttn_value'";
 		if($conn->query($sql) === TRUE){
-			header("Location: recipeApprov.php");
+			header("Location: CCapproval.php");
 
         echo "approve.value";
         echo "this is" .$buttn_value;
@@ -31,7 +31,8 @@
             echo "Error updating record: " . mysqli_error($conn);
         }
 
-    }elseif(isset($_POST['deny']))
+
+	}elseif(isset($_POST['deny']))
     {
         //collection form data
 		// $user_email =  $_POST['useremail'];
@@ -52,16 +53,14 @@
 		  die("Connection failed: " . $conn->connect_error);
 		} 
 
-        $sql = "DELETE FROM recipes WHERE recipeNo='$buttn_value'";
+        $sql = "DELETE FROM users WHERE userIndex='$buttn_value'";
 		if($conn->query($sql) === TRUE){
-			header("Location: recipeApprov.php");
+			header("Location: CCapproval.php");
 
         echo "approve.value";
         echo "this is" .$buttn_value;
         }
-
-	}else{
-		
+    }else{
 		header("Location: login.php");
 			echo "<script>console.log('There was an issue2')</script>";	
 		exit();

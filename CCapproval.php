@@ -17,6 +17,8 @@
 
 <head>
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -44,27 +46,62 @@
 
 
 		<?php
-			while ($row = mysqli_fetch_assoc($pending_contentCreators)){
-				$user_email = $row['userEmail'];
-				$user_firstName = $row['fname'];
-				$user_lastName = $row['lname'];
-				$user_type = $row['typeIndex'];
-				$user_Id = $row['userIndex'];
+			// while ($row = mysqli_fetch_assoc($pending_contentCreators)){
+			// 	$user_email = $row['userEmail'];
+			// 	$user_firstName = $row['fname'];
+			// 	$user_lastName = $row['lname'];
+			// 	$user_type = $row['typeIndex'];
+			// 	$user_Id = $row['userIndex'];
 
+				// echo "
+				// <div class='approval' id='approv1'>
+				// 	<p>Name: $user_firstName $user_lastName</p> 
+				// 	<p>Email: $user_email</p>
+
+				// 	<button class='approve btn' onclick='op1()'>Approve</button><button class='deny btn' onclick='op1()'>Deny</button>
+
+				// 	<div class='confirmPopup' id='pop1'>
+				// 		<h3>You Sure?</h3>
+				// 		<button onclick='cl1()'>Confirm</button>
+				// 	</div>
+
+				// </div>
+				// ";
 				echo "
-				<div class='approval' id='approv1'>
-					<p>Name: $user_firstName $user_lastName</p> 
-					<p>Email: $user_email</p>
-
-					<button class='approve btn' onclick='op1()'>Approve</button><button class='deny btn' onclick='op1()'>Deny</button>
-
-					<div class='confirmPopup' id='pop1'>
-						<h3>You Sure?</h3>
-						<button onclick='cl1()'>Confirm</button>
-					</div>
-
-				</div>
-				";
+				<table class='table table-hover'>
+					<thead class='thead-dark'>
+						<tr>
+						<th scope='col'>UserID</th>
+						<th scope='col'>First</th>
+						<th scope='col'>Last</th>
+						<th scope='col'>Email</th>
+						<th scope='col'>Approve</th>
+						<th scope='col'>Deny</th>
+						</tr>
+					</thead>
+					</table>";
+					while ($row = mysqli_fetch_assoc($pending_contentCreators)){
+						$user_email = $row['userEmail'];
+						$user_firstName = $row['fname'];
+						$user_lastName = $row['lname'];
+						$user_type = $row['typeIndex'];
+						$user_Id = $row['userIndex'];
+						echo "
+							<table class='table table-hover'>
+							<tbody>
+								<tr>
+								<th scope='row'>$user_Id</th>
+								<td>$user_firstName</td>
+								<td>$user_lastName</td>
+								<td>$user_email</td>
+								<form action='CCapproval_proc.php' method='POST'>
+									<td><button class='approve btn' id='approve' name='approve' value='$user_Id'>Approve</button></td>
+									<td><button class='deny btn' id='deny' name='deny' value='$user_Id'>Deny</button></td>
+								</form>
+								</tr>
+							</tbody>
+							</table>
+						";
 			}
 		?>
 
@@ -102,6 +139,9 @@
 
 </div> -->
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </body>

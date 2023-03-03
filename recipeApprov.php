@@ -67,7 +67,7 @@
 				<a href='#' class='btn btn-primary'>Read More</a> <br>
 				<?php echo"
 				<form action='recipeApprov_proc.php' method='POST'>
-					<button class='approve' style='height:35px' value='$recipe_number' id='approve' name='approve'>Approve</button> <button class='deny' style='height:35px'>Deny</button>
+					<button class='approve' style='height:35px' value='$recipe_number' id='approve' name='approve'>Approve</button> <button class='deny' style='height:35px' value='$recipe_number' id='deny' name='deny'>Deny</button>
 				</form>
 				";?>
 			</div>
