@@ -71,13 +71,15 @@
 				$recipe_contributor = $row['contributorName'];
 				?>
 				<div class='col-sm'>
-				<div class='new_recipe' style='width: 18rem;'>
+				<div class='new_recipe' style='width: 18rem;',>
 				<?php echo "<img class='card-img-top' src='food/$recipe_image'> "?>
 				<div class='card-body'>
 				<h5 class='card-title'><?php echo $recipe_name;?></h5>
 				<p class='card-text'><?php echo $recipe_description;?></p>
-				<a href='#' class='btn btn-primary'>Read More</a> <br>
-				<button class="approve" style="height:35px" id="approve" name="approve">Approve</button> <button class="deny" style="height:35px">Deny</button>
+				<p class='card-text'style='font-size: 12px'><?php echo 'From ' .$recipe_contributor;?></p>
+				<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModalCenter'>
+						  Read <br> More
+						</button>
 			</div>
 			</div>
 				</div>
@@ -86,9 +88,8 @@
 			</div>
 				<?php
 				if ((isset($_SESSION['userType']) && ($_SESSION['userType']== 4)) || (isset($_SESSION['userType']) &&  ($_SESSION['userType']== 3))) {
-					echo "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModalCenter'>
-						  Read <br> More
-						</button>
+					echo "
+					
 		
 						<!-- Modal -->
 						<div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
@@ -101,25 +102,7 @@
 								</button>
 							  </div>
 							  <div class='modal-body'>
-								Step 1 <br>
-								$recipe_name
-									Preheat oven to 400°. In a small saucepan, prepare rice according to package instructions. In a large skillet over medium heat, heat oil. Cook onion until soft, about 5 minutes. Stir in tomato paste and garlic and cook until fragrant, about 1 minute more. Add ground beef and cook, breaking up meat with a wooden spoon, until no longer pink, 6 minutes. Drain fat.
-									<br>
-									<br>
-								Step 2 <br>
-									Return beef mixture to skillet, then stir in cooked rice and diced tomatoes. Season with oregano, salt, and pepper. Let simmer until liquid has reduced slightly, about 5 minutes.
-									<br>
-									<br>
-								Step 3<br>
-									Place peppers cut side-up in a 9'-x-13' baking dish and drizzle with oil. Spoon beef mixture into each pepper and top with Monterey jack, then cover baking dish with foil.
-									<br>
-									<br>
-								Step 4<br>
-									Bake until peppers are tender, about 35 minutes. Uncover and bake until cheese is bubbly, 10 minutes more.
-									<br>
-									<br>
-								Step 5 <br>
-									Garnish with parsley before serving.
+								$recipe_instructions
 							  </div>
 							  <div class='modal-footer'>
 								<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
@@ -128,10 +111,10 @@
 						  </div>
 						</div>";
 				}else{
-					echo "Nothing";
+					echo "";
 				}
 
-		}
+		
 	?>
 
 	<!-- <div class="recipe" style="background-color:antiquewhite;">
@@ -203,8 +186,8 @@
 <!-- 	<p>read more</p> -->
 
 
-</div>
-<div class="recipe" style="background-color:antiquewhite;">
+<!-- </div>
+<div class="recipe" style="background-color:antiquewhite;"> -->
 
 <!-- <img src="styles/assets/waakye.jpg" alt="food image">
 		<p style="width:10%"><b>Name:</b> Waakye</p>

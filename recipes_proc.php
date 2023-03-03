@@ -30,13 +30,15 @@ if (isset($_POST['submit'])) {
 
 	if(is_uploaded_file($_FILES['rImage']['tmp_name'])){
 	// Write query
-	$sql = "INSERT INTO recipes (recipeName, recipeDescription, recipeImage2, , status, country, cookingInstructions, contributorName)
+	$sql = "INSERT INTO recipes (recipeName, recipeDescription, recipeImage2, status, country, cookingInstructions, contributorName)
 	VALUES ('$recipe_Name', '$recipe_Description', '$recipe_Image', 2, '$headline', '$recipe_Instructions', '$contributor')";
+	echo "<script>console.log('$sql')</script>";
 
 	// check if query worked
 	if ($conn->query($sql)) {
 		move_uploaded_file($_FILES['rImage']['tmp_name'], "food/$recipe_Image");
 		echo "<script>console.log('Image uploaded successfully')</script>";
+		header("Location: recipeForm.php");
 	}else{
 		echo "<script>alert('Image upload failed')</script>";
 		header("Location: index.php");

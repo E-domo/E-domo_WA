@@ -51,11 +51,11 @@ session_start();
 		<input type="text" id="headline" name="headline" placeholder="Country of Origin" size="20" maxlength="15" required><br>
 
 
-		<textarea id="rDesc" name="rDesc" placeholder="Recipe Description" rows="3" cols="56" required></textarea><br>
+		<textarea id="rDesc" name="rDesc" placeholder="Recipe Description" rows="7" cols="67" required></textarea><br>
 
-		<textarea id="rIngredients" name="rIngredients" placeholder="Recipe Ingredients" rows="3" cols="56" required></textarea><br>
+		<textarea id="rIngredients" name="rIngredients" placeholder="Recipe Ingredients" rows="7" cols="67" required></textarea><br>
 		
-		<textarea id="rInstructions" name="rInstructions" placeholder="Cooking Steps" rows="3" cols="56" required></textarea><br>
+		<textarea id="rInstructions" name="rInstructions" placeholder="Cooking Steps" rows="7" cols="67" required></textarea><br>
 
 
 		<input type="file" name="rImage" accept="image/png, image/jpeg" id="rImage" style="display: none;">
