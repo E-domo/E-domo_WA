@@ -51,15 +51,16 @@ session_start();
 		<input type="text" id="headline" name="headline" placeholder="Country of Origin" size="20" maxlength="15" required><br>
 
 
-		<textarea id="rDesc" name="rDesc" placeholder="Recipe Description" required></textarea><br>
-		<textarea id="rIngredients" name="rIngredients" placeholder="Recipe Ingredients" required></textarea><br>
+		<textarea id="rDesc" name="rDesc" placeholder="Recipe Description" rows="3" cols="56" required></textarea><br>
+
+		<textarea id="rIngredients" name="rIngredients" placeholder="Recipe Ingredients" rows="3" cols="56" required></textarea><br>
 		
-		<textarea id="rInstructions" name="rInstructions" placeholder="Cooking Steps" required></textarea><br>
+		<textarea id="rInstructions" name="rInstructions" placeholder="Cooking Steps" rows="3" cols="56" required></textarea><br>
 
 
 		<input type="file" name="rImage" accept="image/png, image/jpeg" id="rImage" style="display: none;">
 
-       	<label for="rImage" style="border: 2px dashed #e3bc9a; border-radius: 5px; padding: 5px 10px 5px 10px; margin: 10px;" >Add Recipe Poster</label>
+       	<label for="rImage" style="border: 2px dashed #e3bc9a; border-radius: 5px; padding: 5px 10px 5px 10px; margin: 10px; margin-top: 20px;" >Add Recipe Poster</label>
        		<br>
 		<input type="submit" name="submit" id="submit" value="submit" style = "margin: 16px 0px 8px 0px;" onclick="loadRecipe()">
 

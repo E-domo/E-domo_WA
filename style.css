@@ -20,6 +20,10 @@ h2 {
   margin: 0px;
 }
 
+textarea {
+  margin-bottom: 20px;
+}
+
 .index_bg-image {
   /* The image used */
   background-image: url("assets/womancook.jpg");
