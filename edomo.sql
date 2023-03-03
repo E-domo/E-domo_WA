@@ -20,9 +20,7 @@ SET time_zone = "+00:00";
 --
 drop database if exists Edomo;
 create database Edomo;
-use Edomo;
-
---
+use Edomo;--
 
 -- --------------------------------------------------------
 

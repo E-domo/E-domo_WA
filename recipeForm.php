@@ -18,11 +18,32 @@ session_start();
 <div class="bg-text">
 	<h2 style="text-shadow: 2px 2px dimgray;">Recipe Form</h2>
 	<div class="nav-links">
-		<ul>
-	<li><a href="adminIndex.php">Admin Home</a></li>
+	<?php 
+
+		if (isset($_SESSION['userType']) == 1) {
+			$user_fname = $_SESSION['firstName'];
+			echo "
+			<h3 style='text-shadow:2px 2px dimgray;'>Welcome home $user_fname</h3>
+			<ul>
+				<li><a href='adminIndex.php'>Admin Home</a></li>
+				<li><a href='index.php'>Home</a></li>
+				<li><a href='recipes.php'>Recipes</a></li>
+				<li><a href='recipeApprov.php'>Pending Approvals</a></li>
+			</ul>";
+		}elseif (isset($_SESSION['userType']) == 2){
+			echo "
+			<ul>
+				<li><a href='index.php'>Home</a></li>
+				<li><a href='recipes.php'>Recipes</a></li>
+			</ul>";
+		}
+
+	?>
+		<!-- <ul>
+	<li><a href="index.php">Home</a></li>
 	<li><a href="recipes.php">Recipes</a></li>	
 	<li><a href="recipeApprov.php">Pending Approvals</a></li>
-	</ul>
+	</ul> -->
 </div>
 	<form enctype="multipart/form-data" method="POST" action="recipes_proc.php">
 
@@ -30,11 +51,10 @@ session_start();
 		<input type="text" id="headline" name="headline" placeholder="Country of Origin" size="20" maxlength="15" required><br>
 
 
-		<textarea  name="Rdescription" placeholder="Recipe Description" required></textarea><br>
-
-		<textarea  name="Ringredients" placeholder="Recipe Ingredients" required></textarea><br>
-
-		<textarea name="Rinstructions" placeholder="Cooking steps" required></textarea><br>
+		<textarea id="rDesc" name="rDesc" placeholder="Recipe Description" required></textarea><br>
+		<textarea id="rIngredients" name="rIngredients" placeholder="Recipe Ingredients" required></textarea><br>
+		
+		<textarea id="rInstructions" name="rInstructions" placeholder="Cooking Steps" required></textarea><br>
 
 
 		<input type="file" name="rImage" accept="image/png, image/jpeg" id="rImage" style="display: none;">

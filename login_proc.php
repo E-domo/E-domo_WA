@@ -35,10 +35,9 @@
 			$user_Type = $row['typeIndex'];
 
  		}else{
-			header("Location: logIn.php");
-			echo "<script>alert('User does not exist')</script>";
-			exit('issue 1');
-
+			header("Location: logIn.html");
+			echo "<script>console.log('User does not exist')</script>";
+			exit();
 		}
 
 		if (password_verify($user_pass, $user_PassdB)){
@@ -52,6 +51,9 @@
 			if ($_SESSION["userType"] == 1){
 				echo "<script>console.log('You are an admin')</script>";	
 				header("Location: adminIndex.php");
+				exit();
+			}elseif($_SESSION["userType"] == 2){
+				header("Location: index.php");
 				exit();
 			}elseif($_SESSION["userType"] == 3){
 				echo "<script>console.log('You are a customer')</script>";	

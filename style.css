@@ -20,14 +20,6 @@ h2 {
   margin: 0px;
 }
 
-.mytextarea {
-  border: 2px solid #e3bc9a;
-  border-radius: 4px;
-  width: 60%;
-  padding: 12px 20px;
-  margin: 8px 0;
-}
-
 .index_bg-image {
   /* The image used */
   background-image: url("assets/womancook.jpg");
@@ -329,6 +321,7 @@ nav{
   display: flex;
   flex-wrap: wrap;
   padding-left: 50px;
+  border-radius: 10px;
   box-shadow: 0 0 5px 10px #e3bc9a;
   margin: 10px;
 
