@@ -64,12 +64,42 @@
 				<div class='card-body'>
 				<h5 class='card-title'><?php echo $recipe_name;?></h5>
 				<p class='card-text'><?php echo $recipe_description;?></p>
-				<a href='#' class='btn btn-primary'>Read More</a> <br>
+				<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModalCenter'>
+						  Read <br> More
+						</button>
 				<?php echo"
 				<form action='recipeApprov_proc.php' method='POST'>
 					<button class='approve' style='height:35px' value='$recipe_number' id='approve' name='approve'>Approve</button> <button class='deny' style='height:35px' value='$recipe_number' id='deny' name='deny'>Deny</button>
 				</form>
 				";?>
+				<?php
+				if ((isset($_SESSION['userType']) && ($_SESSION['userType']== 4)) || (isset($_SESSION['userType']) &&  ($_SESSION['userType']== 3))) {
+					echo "
+						<!-- Modal -->
+						<div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
+						  <div class='modal-dialog modal-dialog-centered' role='document'>
+							<div class='modal-content'>
+							  <div class='modal-header'>
+								<h5 class='modal-title' id='exampleModalCenterTitle'>$recipe_name</h5>
+								<button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+								  <span aria-hidden='true'>&times;</span>
+								</button>
+							  </div>
+							  <div class='modal-body'>
+								$recipe_instructions
+							  </div>
+							  <div class='modal-footer'>
+								<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+							  </div>
+							</div>
+						  </div>
+						</div>";
+				}else{
+					echo "";
+				}
+
+		
+	?>
 			</div>
 			</div>
 				</div>
