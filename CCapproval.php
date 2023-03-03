@@ -83,33 +83,33 @@
 	let approv3 = document.getElementById('approv3');
 
 	function op1(){
-		popup1.classList.add("openPopUp")
+		popup1.classList.add("openPopUp");
 	}
 		function cl1(){
-		popup1.classList.remove("openPopUp")
-		approv1.innerHTML= ""
-		approv1.style.backgroundColor = "gray"
+		popup1.classList.remove("openPopUp");
+		approv1.innerHTML= "";
+		approv1.style.backgroundColor = "gray";
 		approv1.style.border = "thick dashed white";
 
 	} 
-
+ 
 	function op2(){
-		popup2.classList.add("openPopUp")
+		popup2.classList.add("openPopUp");
 	}
 		function cl2(){
-		popup2.classList.remove("openPopUp")
+		popup2.classList.remove("openPopUp");
 		approv2.innerHTML= ""
-		approv2.style.backgroundColor = "gray"
+		approv2.style.backgroundColor = "gray";
 		approv2.style.border = "thick dashed white";
 	} 
 
 	function op3(){
-		popup3.classList.add("openPopUp")
+		popup3.classList.add("openPopUp");
 	}
 		function cl3(){
-		popup3.classList.remove("openPopUp")
-		approv3.innerHTML= ""
-		approv3.style.backgroundColor = "gray"
+		popup3.classList.remove("openPopUp");
+		approv3.innerHTML= "";
+		approv3.style.backgroundColor = "gray";
 		approv3.style.border = "thick dashed white";
 	} 
 
