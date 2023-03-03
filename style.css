@@ -20,8 +20,9 @@ h2 {
   margin: 0px;
 }
 
-textarea {
-  margin-bottom: 20px;
+#imagelabel:hover {
+  color: dimgray;
+  background-color: dimgray;
 }
 
 .index_bg-image {

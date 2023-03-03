@@ -47,20 +47,20 @@ session_start();
 </div>
 	<form enctype="multipart/form-data" method="POST" action="recipes_proc.php">
 
-		<input type="text" id="rName" name="rName" placeholder="Recipe Name" size="20" maxlength="45" required><br>
-		<input type="text" id="headline" name="headline" placeholder="Country of Origin" size="20" maxlength="15" required><br>
+		<input type="text" id="rName" name="rName" placeholder="Recipe Name" size="20" maxlength="45" style ="margin-bottom: 5px" required><br>
+		<input type="text" id="headline" name="headline" placeholder="Country of Origin" size="20" maxlength="15" style ="margin-bottom: 5px;margin-top: 0px;"required><br>
 
 
-		<textarea id="rDesc" name="rDesc" placeholder="Recipe Description" rows="7" cols="67" required></textarea><br>
+		<textarea id="rDesc" name="rDesc" placeholder="Recipe Description" rows="5" cols="56" required></textarea><br>
 
-		<textarea id="rIngredients" name="rIngredients" placeholder="Recipe Ingredients" rows="7" cols="67" required></textarea><br>
+		<textarea id="rIngredients" name="rIngredients" placeholder="Recipe Ingredients" rows="5" cols="56" required></textarea><br>
 		
-		<textarea id="rInstructions" name="rInstructions" placeholder="Cooking Steps" rows="7" cols="67" required></textarea><br>
+		<textarea id="rInstructions" name="rInstructions" placeholder="Cooking Steps" rows="5" cols="56" required></textarea><br>
 
 
-		<input type="file" name="rImage" accept="image/png, image/jpeg" id="rImage" style="display: none;">
+		<input type="file" name="rImage" accept="image/png, image/jpeg" id="rImage" style="display: none; margin: 10px;" >
 
-       	<label for="rImage" style="border: 2px dashed #e3bc9a; border-radius: 5px; padding: 5px 10px 5px 10px; margin: 10px; margin-top: 20px;" >Add Recipe Poster</label>
+       	<label id = "imagelabel" for="rImage" style=" padding: 5px 10px 5px 10px; margin: 10px; margin-top: 40px;" >Click Me Add Recipe Poster</label>
        		<br>
 		<input type="submit" name="submit" id="submit" value="submit" style = "margin: 16px 0px 8px 0px;" onclick="loadRecipe()">
 
