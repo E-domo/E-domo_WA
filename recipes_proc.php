@@ -10,8 +10,8 @@ if (isset($_POST['submit'])) {
 	$recipe_Ingredients = $_POST['rIngredients'];
 	$recipe_Instructions = $_POST['rInstructions'];
 	$recipe_Image = $_FILES['rImage']['name'];
-	var_dump($recipe_Image);
-	print_r($recipe_Image);
+	// var_dump($recipe_Image);
+	// print_r($recipe_Image);
 	$contributor = $_SESSION['firstName'];
 
 		//database connection parameters
@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 
 	if(is_uploaded_file($_FILES['rImage']['tmp_name'])){
 	// Write query
-	$sql = "INSERT INTO recipes (recipeName, recipeDescription, recipeImage2, status, country, cookingInstructions, contributorName)
+	$sql = "INSERT INTO recipes (recipeName, recipeDescription, recipeImage2, , status, country, cookingInstructions, contributorName)
 	VALUES ('$recipe_Name', '$recipe_Description', '$recipe_Image', 2, '$headline', '$recipe_Instructions', '$contributor')";
 
 	// check if query worked

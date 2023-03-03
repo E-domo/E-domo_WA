@@ -69,7 +69,7 @@ session_start();
 </div> -->
 
 	<!-- script -->
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 
 		document.querySelector("textarea").setSelectionRange(0,0); // place cursor at start
 
@@ -124,7 +124,7 @@ session_start();
 
 
 
-	</script>
+	</script> -->
 
 
 

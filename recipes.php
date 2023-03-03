@@ -56,28 +56,35 @@
 
 	</div>
 
-	<?php
-		while ($row = mysqli_fetch_assoc($approved_recipes)){
-			$recipe_name = $row['recipeName'];
-			$recipe_image = $row['recipeImage2'];
-			$recipe_description = $row['recipeDescription'];
-			$recipe_country = $row['country'];
-			$recipe_ingredients = $row['recipeIngredients'];
-			$recipe_instructions = $row['cookingInstructions'];
-			$recipe_contributor = $row['contributorName'];
-
-			echo "
-			<div class='recipe' style='background-color:ghostwhite;'>
-			<img src='food/$recipe_image'>
-					<p style='width:10%'><b>Name:</b> $recipe_name</p>
-					<p><b>Description:</b> $recipe_description</p>
-					<p style='width:10%'><b>Relevant Ingredients:</b></p>
-						<ul style='padding:10px'>
-						<li>$recipe_ingredients</li>
-					</ul>
-				<p><b>Posted By:</b>$recipe_contributor </p>
-				<br>";
-
+	<div class='container'>
+			
+	
+			<div class='row'>
+			<?php while ($row = mysqli_fetch_assoc($approved_recipes)):?>
+				<?php
+				$recipe_name = $row['recipeName'];
+				$recipe_image = $row['recipeImage2'];
+				$recipe_description = $row['recipeDescription'];
+				$recipe_country = $row['country'];
+				$recipe_ingredients = $row['recipeIngredients'];
+				$recipe_instructions = $row['cookingInstructions'];
+				$recipe_contributor = $row['contributorName'];
+				?>
+				<div class='col-sm'>
+				<div class='new_recipe' style='width: 18rem;'>
+				<?php echo "<img class='card-img-top' src='food/$recipe_image'> "?>
+				<div class='card-body'>
+				<h5 class='card-title'><?php echo $recipe_name;?></h5>
+				<p class='card-text'><?php echo $recipe_description;?></p>
+				<a href='#' class='btn btn-primary'>Read More</a> <br>
+				<button class="approve" style="height:35px" id="approve" name="approve">Approve</button> <button class="deny" style="height:35px">Deny</button>
+			</div>
+			</div>
+				</div>
+				<?php endwhile; ?>
+			</div>
+			</div>
+				<?php
 				if ((isset($_SESSION['userType']) && ($_SESSION['userType']== 4)) || (isset($_SESSION['userType']) &&  ($_SESSION['userType']== 3))) {
 					echo "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModalCenter'>
 						  Read <br> More
@@ -214,7 +221,7 @@
 	</div> -->
 
 		<?php 
-			if (isset($_SESSION['userType']) == 2 && $_SESSION['userType'] == 2) {
+			if ((isset($_SESSION['userType']) == 2 && $_SESSION['userType'] == 2) || (isset($_SESSION['userType']) == 1 && $_SESSION['userType'] == 1)) {
 				$user_fname = $_SESSION['firstName'];
 				echo "<a href='recipeForm.php' class='adminbutton'>secret button</a>";
 			}else{

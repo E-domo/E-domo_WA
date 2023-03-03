@@ -18,9 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
-drop database if exists Edomo;
-create database Edomo;
-use Edomo;--
+Database: `edomo`
+--
 
 -- --------------------------------------------------------
 

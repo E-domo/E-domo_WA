@@ -4,6 +4,7 @@ session_start();
 		header("Location: logIn.php");
 		exit();
 	}
+
  ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ session_start();
 
 		<div class="bg-text">
 			<h1 style="text-shadow:2px 2px dimgray;">
-				E-Domo
+				E domo
 			</h1>
 			<h3 style="color:whitesmoke; text-shadow:2px 2px dimgray;">ADMIN</h3>
 			<nav class="nav">

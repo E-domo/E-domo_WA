@@ -1,8 +1,19 @@
+<?php 
+	session_start();
+
+	include_once 'connection.php';
+
+	$sql = "SELECT * FROM recipes WHERE status = 2";
+	$approved_recipes = $conn->query($sql);
+ ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -29,67 +40,55 @@
 
 
 
+		
+		
+			<div class='container'>
+			
+	
+			<div class='row'>
+			<?php while ($row = mysqli_fetch_assoc($approved_recipes)):?>
+				<?php
+				$recipe_number = $row['recipeNo'];
+				$recipe_name = $row['recipeName'];
+				$recipe_image = $row['recipeImage2'];
+				$recipe_description = $row['recipeDescription'];
+				$recipe_country = $row['country'];
+				$recipe_ingredients = $row['recipeIngredients'];
+				$recipe_instructions = $row['cookingInstructions'];
+				$recipe_contributor = $row['contributorName'];
+				echo "<script>console.log('$recipe_number')</script>"
+				?>
+				<div class='col-sm'>
+				<div class='new_recipe' style='width: 18rem;'>
+				<?php echo "<img class='card-img-top' src='food/$recipe_image'> "?>
+				<div class='card-body'>
+				<h5 class='card-title'><?php echo $recipe_name;?></h5>
+				<p class='card-text'><?php echo $recipe_description;?></p>
+				<a href='#' class='btn btn-primary'>Read More</a> <br>
+				<?php echo"
+				<form action='recipeApprov_proc.php' method='POST'>
+					<button class='approve' style='height:35px' value='$recipe_number' id='approve' name='approve'>Approve</button> <button class='deny' style='height:35px'>Deny</button>
+				</form>
+				";?>
+			</div>
+			</div>
+				</div>
+				<?php endwhile; ?>
+				<!-- <div class='col-sm'>
+				One of three columns
+				</div>
+				<div class='col-sm'>
+				One of three columns
+				</div> -->
+			</div>
+			</div>
+			
 
-<div class="recipe" style="background-color:ghostwhite;" id="recipe1">
-<img src="assets/jrice small.jpeg" alt="food image">
-		<p style="width:10%"><b>Name:</b> Jollof</p>
-		<p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et convallis justo. Donec quis libero at ligula mollis euismod ac eu lorem. Cras cursus neque mauris. Vivamus ac dignissim tortor...  </p>
-		<p style="width:10%"><b>Relevant Ingredients:</b></p>
-			<ul style="padding:10px">
-			<li>rice</li>
-			<li>tomatoes</li>
-			<li>meat</li>
-			<li>water</li>
-		</ul>
-	<p><b>Made Like:</b>User553 </p>
-	<p>read more</p><button class="approve btn" onclick="op1()">Approve</button><button class="deny btn" onclick="op1()">Deny</button>
-
-<div class="confirmPopup" id="pop1"><h3>You Sure?</h3>
-	<button onclick="cl1()">Confirm</button>
-</div>
-
-</div>
-<div class="recipe" style="background-color:antiquewhite;" id="recipe2">
-
-<img src="assets/waakye.jpg" alt="food image">
-		<p style="width:10%"><b>Name:</b> Waakye</p>
-		<p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et convallis justo. Donec quis libero at ligula mollis euismod ac eu lorem. Cras cursus neque mauris. Vivamus ac dignissim tortor...  </p>
-		<p style="width:10%"><b>Relevant Ingredients:</b></p>
-			<ul style="padding:10px">
-			<li>rice</li>
-			<li>beans</li>
-			<li>meat</li>
-			<li>weird leaf</li>
-		</ul>
-	<p><b>Made Like:</b>User557</p>
-
-	<p>read more</p><button class="approve btn" onclick="op2()">Approve</button><button class="deny btn" onclick="op2()">Deny</button>
-	<div class="confirmPopup" id="pop2"><h3>You Sure?</h3>
-	<button onclick="cl2()">Confirm</button>
-</div>
-	</div>
-
-	<div class="recipe" style="background-color:ghostwhite;" id="recipe3">
-<img src="assets/jrice small.jpeg" alt="food image">
-		<p style="width:10%"><b>Name:</b> Jollof</p>
-		<p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et convallis justo. Donec quis libero at ligula mollis euismod ac eu lorem. Cras cursus neque mauris. Vivamus ac dignissim tortor...  </p>
-		<p style="width:10%"><b>Relevant Ingredients:</b></p>
-			<ul style="padding:10px">
-			<li>rice</li>
-			<li>tomatoes</li>
-			<li>meat</li>
-			<li>water</li>
-		</ul>
-	<p><b>Made Like:</b>User553 </p>
-	<p>read more</p><button class="approve btn" onclick="op3()">Approve</button><button class="deny btn" onclick="op3()">Deny</button>
-	<div class="confirmPopup" id="pop3"><h3>You Sure?</h3>
-	<button onclick="cl3()">Confirm</button>
-</div>
+	
 
 
 </div>
-
-<div class="recipe" style="background-color:antiquewhite;" id="recipe4">
+<!-- <div class="recipe" style="background-color:antiquewhite;">
 
 <img src="assets/waakye.jpg" alt="food image">
 		<p style="width:10%"><b>Name:</b> Waakye</p>
@@ -102,73 +101,70 @@
 			<li>weird leaf</li>
 		</ul>
 	<p><b>Made Like:</b>User557 </p>
-	<p>read more</p><button class="approve btn" onclick="op3()">Approve</button><button class="deny btn" onclick="op1()">Deny</button>
-	<div class="confirmPopup" id="pop4"><h3>You Sure?</h3>
-	<button onclick="cl4()">Confirm</button>
-</div>
+	<p>read more</p><button class="approve">Approve</button><button class="deny">Deny</button>
 	</div>
 
+	<div class="recipe" style="background-color:ghostwhite;">
+<img src="assets/jrice small.jpeg" alt="food image">
+		<p style="width:10%"><b>Name:</b> Jollof</p>
+		<p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et convallis justo. Donec quis libero at ligula mollis euismod ac eu lorem. Cras cursus neque mauris. Vivamus ac dignissim tortor...  </p>
+		<p style="width:10%"><b>Relevant Ingredients:</b></p>
+			<ul style="padding:10px">
+			<li>rice</li>
+			<li>tomatoes</li>
+			<li>meat</li>
+			<li>water</li>
+		</ul>
+	<p><b>Made Like:</b>User553 </p>
+	<p>read more</p><button class="approve">Approve</button><button class="deny">Deny</button>
 
-<a href="recipeForm.php" class="adminbutton" style="display:none;">secret button</a>
+</div>
+
+<div class="recipe" style="background-color:antiquewhite;">
+
+<img src="assets/waakye.jpg" alt="food image">
+		<p style="width:10%"><b>Name:</b> Waakye</p>
+		<p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et convallis justo. Donec quis libero at ligula mollis euismod ac eu lorem. Cras cursus neque mauris. Vivamus ac dignissim tortor...  </p>
+		<p style="width:10%"><b>Relevant Ingredients:</b></p>
+			<ul style="padding:10px">
+			<li>rice</li>
+			<li>beans</li>
+			<li>meat</li>
+			<li>weird leaf</li>
+		</ul>
+	<p><b>Made Like:</b>User557 </p>
+	<p>read more</p><button class="approve">Approve</button><button class="deny">Deny</button>
+	</div> -->
+
+<a href="recipeForm.php" class="adminbutton">secret button</a>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<?php 
+
+	// function approve_recipe($recipe_id){
+	// 	include_once 'connection.php';
+	// 	// $sql = "SELECT status FROM recipes WHERE recipeNo = recipe_id";
+	// 	$sql = mysqli_query($conn, "UPDATE recipes SET status=2 WHERE recipeNo=$recipe_id");
+	// 	if($conn->query($sql) === TRUE){
+	// 		header("Location: adminIndex.php");
+	// 	}
+
+	// }
+
+	// function store_id(){
+
+	// }
+	if(isset($POST['approve'])){
+		echo "approve.value";
+	}else{
+		echo "hmmm";
+	}
+
+?>
 
 </body>
 
-<script type="text/javascript">
-	let popup1 = document.getElementById('pop1');
-	let popup2 = document.getElementById('pop2');
-	let popup3 = document.getElementById('pop3');
-	let popup4 = document.getElementById('pop4');
-	let recipe1 = document.getElementById('recipe1');
-	let recipe2 = document.getElementById('recipe2');
-	let recipe3 = document.getElementById('recipe3');
-	let recipe4 = document.getElementById('recipe4');
-
-
-	function op1(){
-		popup1.classList.add("openPopUp")
-	}
-	function op2(){
-		popup2.classList.add("openPopUp")
-	}
-	function op3(){
-		popup3.classList.add("openPopUp")
-	}
-	function op4(){
-		popup4.classList.add("openPopUp")
-	}
-
-	function cl1(){
-		pop1.classList.add("openPopUp")
-		recipe1.innerHTML= ""
-		recipe1.style.backgroundColor = "gray"
-		recipe1.style.border = "thick dashed white";
-
-	} 
-
-	function cl2(){
-		pop2.classList.add("openPopUp")
-		recipe2.innerHTML= ""
-		recipe2.style.backgroundColor = "gray"
-		recipe2.style.border = "thick dashed white";
-
-	} 
-
-	function cl3(){
-		pop3.classList.add("openPopUp")
-		recipe3.innerHTML= ""
-		recipe3.style.backgroundColor = "gray"
-		recipe3.style.border = "thick dashed white";
-
-	} 
-
-	function cl4(){
-		pop4.classList.add("openPopUp")
-		recipe4.innerHTML= ""
-		recipe4.style.backgroundColor = "gray"
-		recipe4.style.border = "thick dashed white";
-
-	} 
-
-
-</script>
 </html>
