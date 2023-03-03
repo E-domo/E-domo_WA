@@ -1,0 +1,13 @@
+E-Domo is a web application that is made to allow users, depending on their credentials, to view recipes. 
+It gives the public access to meals, their ingredients, and cooking steps to allow them to cook healthy home-cooked meals in an attempt to boost nutrition or spice their lives up.
+The team used HTML5, CSS, JS, and PHP to build the application.
+We intend to implement an event page and subscription services later on.
+You can view the site at the following IP
+3.10.53.28
+or you can download and host the files locally. You must import the SQL file in phpmyadmin for the web app to be functional.
+
+Members:
+Charles A. Yebuah - Front End, Git head
+Hubert Delasi Dake - Back End
+Nadia Afriyie - Group manager and server-side lead
+Ann-Vannesa Lartey - Database 
